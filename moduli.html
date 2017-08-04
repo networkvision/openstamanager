@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>OpenSTAManager</title>
+
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,900,700,300|Open+Sans:400,800,700|Titillium+Web:600,400' type='text/css'>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/github.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="site-branding">
+                <h1 class="site-name">
+                    <a href="" >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
+                </h1>
+                <h2 class="site-description">Il gestionale open source per l'assistenza tecnica e la fatturazione</h2>
+            </div>
+
+            <div class="button-line">
+                <a href="https://github.com/devcode-it/openstamanager" target="_blank" class="btn btn-default">View on GitHub</a>
+                <a href="https://github.com/devcode-it/openstamanager/zipball/master" class="btn btn-default hidden-xs">Download .zip</a>
+                <a href="https://github.com/devcode-it/openstamanager/tarball/master" class="btn btn-default hidden-xs">Download .tar.gz</a>
+            </div>
+
+                            <a href="https://github.com/devcode-it/openstamanager">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                </a>
+            
+            <div class="text-left visible-xs-block" style="margin-left: 15px;">
+                <a href="#sidebar" data-toggle="collapse"><i class="fa fa-3x fa-bars" aria-hidden="true"></i></a>
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                                    <nav id="sidebar" class="col-sm-3 col-lg-2 collapse in" role="navigation">
+                                                    <p class="text-muted">
+                                Documentazione di base
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/index.html">
+                                            Home page
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/installazione.html">
+                                            Installazione
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/framework.html">
+                                            Framework
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/assets.html">
+                                            Assets
+                                        </a>
+                                    </li>
+                                                                    <li class="active">
+                                        <a href="/moduli.html">
+                                            Moduli
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Approfondimenti
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/api.html">
+                                            API
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://www.openstamanager.com/">
+                                            Sito ufficiale
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
+                    </nav>
+
+                
+                <section class="col-sm-9 col-lg-10 content">
+                    <h1 id="moduli">Moduli</h1>
+<blockquote>
+<p>Un modulo (software) è un componente software autonomo e ben identificato, e quindi facilmente riusabile.</p>
+<p>-- <cite><a href="https://it.wikipedia.org/wiki/Modulo#Informatica">Wikipedia</a></cite></p>
+</blockquote>
+<p>All'interno del progetto, i moduli vengono genericamente definiti quali sistemi di gestione delle funzionalità del gestionale; proprio per questo, la loro struttura e composizione risulta spesso variabile e differenziata, presentando componenti uniche e talvolta complesse.
+Ogni modulo è composto da diverse sezioni, generalmente suddivise in:</p>
+<ul>
+<li>Nucleo;</li>
+<li><a href="stampe.html">Stampe</a>;</li>
+<li><a href="widget.html">Widget</a>;</li>
+<li><a href="plugin.html">Plugin</a>.</li>
+</ul>
+<p>Inoltre, OpenSTAManager presenta una struttura nativamente preposta alla personalizzazione delle proprie funzioni, che rende il progetto ancora più complicato da comprendere a prima vista.</p>
+<p>Segue un'analisi della struttura fisica e logica del nucleo dei moduli supportati dal gestionale; per ulteriori informazioni e approfondimenti, si consiglia di osservare l'effettiva composizione dei moduli implementati in modo ufficiale.</p>
+<!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
+<ul>
+<li><a href="#struttura">Struttura</a>
+<ul>
+<li><a href="#actionsphp">actions.php</a></li>
+<li><a href="#addphp-e-editphp">add.php e edit.php</a></li>
+<li><a href="#initphp">init.php</a></li>
+<li><a href="#controller_afterphp-e-controller_beforephp">controller_after.php e controller_before.php</a></li>
+<li><a href="#modutilphp">modutil.php</a></li>
+</ul></li>
+<li><a href="#database">Database</a>
+<ul>
+<li><a href="#zz_modules">zz_modules</a></li>
+<li><a href="#zz_permissions-e-zz_group_module">zz_permissions e zz_group_module</a></li>
+<li><a href="#zz_views-e-zz_group_view">zz_views e zz_group_view</a></li>
+<li><a href="#zz_plugins-e-zz_widgets">zz_plugins e zz_widgets</a></li>
+</ul></li>
+<li><a href="#consigli-per-lo-sviluppo">Consigli per lo sviluppo</a>
+<ul>
+<li><a href="#progettazione">Progettazione</a></li>
+<li><a href="#sviluppo">Sviluppo</a></li>
+<li><a href="#test">Test</a></li>
+</ul></li>
+<li><a href="#installazione">Installazione</a>
+<ul>
+<li><a href="#archivio-zip">Archivio ZIP</a>
+<ul>
+<li><a href="#updateversionesql">update/VERSIONE.sql</a></li>
+<li><a href="#updateunistallphp-include">update/unistall.php (INCLUDE)</a></li>
+<li><a href="#module">MODULE</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#moduli-di-base">Moduli di base</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="struttura">Struttura</h2>
+<p>La sezione fondamentale di un qualsiasi modulo all'interno di OpenSTAManager risulta presenta all'interno della cartella <code>modules</code>, che contiene tutti i file su cui si basano tutti i moduli per funzionare correttamente.
+In questo contensto, ogni modulo possiede una cartella univoca per gestire i propri contenuti in modo indipendente ma comunque sottoposto alla seguente struttura di base.</p>
+<pre><code>.
+└── modulo
+    ├── actions.php
+    ├── add.php
+    ├── controller_after.php
+    ├── controller_before.php
+    ├── edit.php
+    ├── init.php
+    └── modutil.php</code></pre>
+<p>Il gestionale supporta in modo nativo questa struttura, che può essere ampliata e personalizzata a necessità dagli sviluppatori: si consiglia pertanto di analizzare la struttuta dei moduli <strong>Iva</strong>, <strong>Dashboard</strong> e <strong>Contratti</strong> per esempi di diversa complessità e funzione.</p>
+<p><strong>Attenzione</strong>: la presenza dei file sopra indicati non è strettamente necessaria per il funzionamento di un modulo (si veda <strong>Movimenti</strong>, presente esclusivamente a livello di database).</p>
+<h3 id="actionsphp">actions.php</h3>
+<p>Il file <code>actions.php</code> gestisce tutte le operazioni supportate dal modulo.</p>
+<p>In generale, le diverse operazioni vengono gestite attraverso attraverso una logica programmativa basata su casi (solitamente, il parametro <code>op</code> permette di identificare quale azione viene richiesta); il funzionamento a livello di programmazione può essere comunque sottoposto a scelte personali.</p>
+<p>L'unico requisito effettivo risulta relativo alle operazioni di creazione dei nuovi record, per cui deve essere definito all'interno della variabile <code>$id_record</code> l'identificativo del nuovo elemento.
+Per osservare questo sistema, si consiglia di analizzare il relativo file del modulo <strong>Iva</strong>.</p>
+<h3 id="addphp-e-editphp">add.php e edit.php</h3>
+<p>Il file <code>add.php</code> contiene il template HTML dedicato all'inserimento di nuovi elementi per il modulo, mentre <code>edit.php</code> contiene il template HTML dedicato alla modifica degli stessi.</p>
+<p>In base alla configurazione del modulo nel database, il file <code>edit.php</code> può assumere il ruolo di gestore della sezione principale dell'interno modulo, permettendo così la personalizzazione dei contenuti come si può notare per i moduli <strong>Dashboard</strong> e  <strong>Gestione componenti</strong>.</p>
+<p><strong>Attenzione</strong>: il progetto individua in automatico la presenza di questo file e agisce di conseguenza per permettere o meno l'inserimento di nuovi valori.</p>
+<h3 id="initphp">init.php</h3>
+<p>Il file <code>init.php</code> si occupa di individuare le informazioni principali utili all'identificazione e alla modifica dei singoli elementi del modulo.
+In particolare, questi file sono solitamente composti da una query dedicata ad ottenere tutti i dati dell'elemento nella variabile <code>$records</code>, successivamente utilizzata dal gestore dei template per completare le informazioni degli input.</p>
+<h3 id="controller_afterphp-e-controller_beforephp">controller_after.php e controller_before.php</h3>
+<p>Il file <code>controller_after.php</code> contiene le funzioni javaScript aggiuntive specifiche del modulo.</p>
+<h3 id="modutilphp">modutil.php</h3>
+<p>Il file <code>modutil.php</code> viene utilizzato per definire le funzioni PHP specifiche per il modulo, e permettere in questo modo uan gestione semplificata delle operazioni più comuni.</p>
+<p>Si noti che un modulo non è necessariamente limitato all'utilizzo del proprio file <code>modutil.php</code>: come avviene per esempio in <strong>Fatture</strong> e <strong>Interventi</strong>, risulta possibile richiamare file di questa tipologia da altri moduli (in questo caso, da <strong>Articoli</strong> per la gestione delle movimentazioni di magazzino).</p>
+<h2 id="database">Database</h2>
+<p>All'interno del database del progetto, le tabelle con il suffisso <code>zz</code> sono generalmente dedicate alla gestione delle funzioni di base del gestionale, finalizzate in particolare all'utilizzo dei moduli installati.</p>
+<p>La gestione dei moduli avviene in questo senso grazie alle seguenti tabelle:</p>
+<ul>
+<li><code>zz_modules</code>;</li>
+<li><code>zz_permissions</code>;</li>
+<li><code>zz_views</code>;</li>
+<li><code>zz_plugins</code>;</li>
+<li><code>zz_widgets</code>.</li>
+</ul>
+<h3 id="zz_modules">zz_modules</h3>
+<p>La tabella <code>zz_modules</code> contiene tutte le informazioni dei diversi moduli installati nel gestionale in uso, con particolare riferimento a:</p>
+<ul>
+<li>Nome (utilizzato a livello di programmazione) [<code>name</code>]</li>
+<li>Titolo (visibile e personalizzabile) [<code>title</code>]</li>
+<li>Percorso nel file system (partendo da <code>modules/</code>) [<code>directory</code>]</li>
+<li>Icona [<code>icon</code>]</li>
+<li>Posizione nella sidebar [<code>order</code>]</li>
+<li>Compatibilità [<code>compatibility</code>]</li>
+<li>Query di default [<code>options</code>]</li>
+<li>Query personalizzata [<code>options2</code>]</li>
+</ul>
+<p>Gli ultimi due attributi si rivelano di fondamentale importanza per garantire il corretto funzionamento del modulo, poiché descrivono il comportamento dello stesso per la generazione della schermata principale nativa di OpenSTAManager.
+Sono permessi i seguenti valori:</p>
+<ul>
+<li>custom [Modulo con schermata principale personalizzata e definita nel file <code>edit.php</code>]</li>
+<li>{VUOTO} [Menu non navigabile]</li>
+<li>menu [Menu non navigabile]</li>
+<li>Oggetto JSON</li>
+</ul>
+<pre><code class="language-json">    { "main_query": [ { "type": "table", "fields": "Nome, Descrizione", "query": "SELECT `id`, `nome` AS `Nome`, `descrizione` AS `Descrizione` FROM `tabella` HAVING 1=1 ORDER BY `nome`"} ]}</code></pre>
+<ul>
+<li>Query SQL [vedasi la tabella <a href="#zz_views-e-zz_group_view">zz_views</a>]</li>
+</ul>
+<pre><code class="language-sql">    SELECT |select| FROM `tabella` HAVING 1=1</code></pre>
+<h3 id="zz_permissions-e-zz_group_module">zz_permissions e zz_group_module</h3>
+<p>La tabella <code>zz_permissions</code> contiene i permessi di accesso dei vari gruppi ai diversi moduli, mentre la tabella <code>zz_group_module</code> contiene le clausole DQL per permettere questo accesso.</p>
+<h3 id="zz_views-e-zz_group_view">zz_views e zz_group_view</h3>
+<p>Le tabelle <code>zz_views</code> e <code>zz_group_view</code> vengono utilizzate dal gestionale per la visualizzazione delle informazioni secondo i permessi accordati, oltre che dal modulo <strong>Viste</strong> per la gestione dinamica delle query.</p>
+<h3 id="zz_plugins-e-zz_widgets">zz_plugins e zz_widgets</h3>
+<p>La tabella <code>zz_plugins</code> contiene l'elenco di plugins relativi ai diversi moduli, mentre la tabella <code>zz_group_module</code> contiene l'elenco di widgets dei vari moduli.</p>
+<h2 id="consigli-per-lo-sviluppo">Consigli per lo sviluppo</h2>
+<h3 id="progettazione">Progettazione</h3>
+<p>Alla base dello sviluppo di ogni modulo vi è una fase di analisi indirizzata all'individuazione dettagliata delle funzionalità dello stesso e della struttura interna al database atta a sostenere queste funzioni. Siete dunque pregati di identificare chiaramente tutte le caratteristiche del Vostro nuovo modulo o delle Vostre modifiche prima di iniziare lo sviluppo vero e proprio (comunemente identificato con la scrittura del codice).</p>
+<blockquote>
+<p>E' bene trascurare le fasi di analisi e di progetto e precipitarsi all'implementazione allo scopo di guadagnare il tempo necessario per rimediare agli errori commessi per aver trascurato la fase di analisi e di progetto.</p>
+<p>-- <cite>Legge di Mayers</cite></p>
+</blockquote>
+<h3 id="sviluppo">Sviluppo</h3>
+<p>Lo sviluppo del codice deve seguire alcune direttive generali per la corretta interpretazione del codice all'interno del gestionale: ciò comporta una struttura di base fondata sui file precedentemente indicati nella sezione <a href="#Cartella_modules">Cartella <code>modules</code></a> ma ampliabile liberamente.</p>
+<h3 id="test">Test</h3>
+<p>Prima di pubblicare un modulo si consiglia di effettuare svariati test in varie installazioni. Siete inoltre pregati di indicare i bug noti.</p>
+<blockquote>
+<p>Se c’è una remota possibilità che qualcosa vada male, sicuramente ciò accadrà e produrrà il massimo danno.</p>
+<p>-- <cite>Legge di Murphy</cite></p>
+</blockquote>
+<h2 id="installazione">Installazione</h2>
+<p>L'installazione di un modulo è completabile in modo automatico seguendo la seguente procedura:</p>
+<ul>
+<li>Scaricare l'archivio <code>.zip</code> del modulo da installare;</li>
+<li>Accedere al proprio gestionale con un account abilita all'accesso del modulo <strong>Aggiornamenti</strong>;</li>
+<li>Selezionare l'archivio scaricato nella selezione file della sezione &quot;Carica un nuovo modulo&quot;;</li>
+<li>Cliccare il pulsante &quot;Carica&quot;.</li>
+</ul>
+<p>Si ricorda che per effettuare l'installazione è necessaria la presenza dell'estensione <code>php_zip</code> (per ulteriori informazioni guardare <a href="http://php.net/manual/it/zip.installation.php">qui</a>).</p>
+<p><strong>Attenzione</strong>: la procedura può essere completata anche a livello manuale, ma si consiglia di evitare tale sistema a meno che non si conosca approfonditamente il funzionamento complessivo e specifico del database del progetto.</p>
+<h3 id="archivio-zip">Archivio ZIP</h3>
+<p>L'archivio scaricato deve contenere direttamente al proprio interno i contenuti del modulo da installare, organizzati secondo la seguente struttura:</p>
+<pre><code>modulo.zip
+├── update
+|   ├── VERSIONE.sql
+|   └── unistall.php
+├── ... - File contententi il codice del modulo
+└── MODULE</code></pre>
+<h4 id="updateversionesql">update/VERSIONE.sql</h4>
+<p>Il file <code>VERSIONE.sql</code> (dove VERSIONE sta per la versione del modulo con <code>_</code>[underscore] al posto di <code>.</code>[punto]) contiene le operazioni di installazione del modulo a livello del database, comprendenti la creazione delle tabelle di base del modulo e l'inserimento di ulteriori dati nelle altre tabelle.</p>
+<h4 id="updateunistallphp-include">update/unistall.php (INCLUDE)</h4>
+<p>Il file <code>unistall.php</code> contiene le operazioni di disinstallazione del modulo a livello del database, comprendenti l'eliminazione delle tabelle non più necessarie e dei dati inutilizzati.</p>
+<pre><code class="language-php">&lt;?php
+
+include_once __DIR__.'/../../core.php';
+
+$dbo-&gt;query("DROP TABLE `tabella`");
+
+?&gt;</code></pre>
+<h4 id="module">MODULE</h4>
+<p>Il file <code>MODULE</code> è infine il diretto responsabile dell'installazione del modulo poiché definisce tutti i valori caratteristici dello stesso; in caso di sua assenza la cartella compressa viene considerata non corretta.</p>
+<pre><code class="language-ini">module_name = Nome del modulo
+module_version = Versione del modulo
+module_dir = Cartella di installazione del modulo
+module_options = Operazione da eseguire all'apertura del modulo
+module_icon = Icona del modulo (Font-Awesome)
+module_compatibility = Compatibilità del modulo
+module_parent = "Genitore" del modulo</code></pre>
+<h2 id="moduli-di-base">Moduli di base</h2>
+<p>Nella versione base del gestionale sono presenti, all'interno della cartella <code>modules</code>, i seguenti moduli.</p>
+<pre><code>.
+├── aggiornamenti
+├── anagrafiche
+├── articoli
+├── automezzi
+├── backup
+├── beni
+├── categorie
+├── causali
+├── contratti
+├── dashboard
+├── ddt
+├── fatture
+├── gestione_componenti
+├── interventi
+├── impostazioni
+├── iva
+├── listini
+├── misure
+├── my_impianti
+├── ordini
+├── pagamenti
+├── partitario
+├── porti
+├── preventivi
+├── primanota
+├── scadenzario
+├── stati_intervento
+├── tecnici_tariffe
+├── tipi_anagrafiche
+├── tipi_intervento
+├── utenti
+├── viste
+├── voci_servizio
+└── zone</code></pre>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="top-bar-line"></div>
+            <div class="bottom-panel">
+                <div class="text-center">
+            <span>
+                                                </span>
+                </div><!-- text-center -->
+            </div><!-- bottom-panel -->
+        </footer>
+
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+
+        <script>
+            hljs.initHighlighting();
+
+            function checkWidth($highlight) {
+                if ($(window).width() < 768) {
+                    $highlight.addClass('collapse');
+                } else {
+                    $highlight.removeClass('collapse');
+                }
+            }
+
+            $(document).ready(function () {
+                var $highlights = $('.hljs');
+                $highlights.each(function (index) {
+                    var $this = $(this).parent();
+                    var elementId = 'hljs' + index;
+                    $this.attr('id', elementId);
+                    $this.before('<a class="visible-xs-inline visible-sm-inline" href="#' + elementId + '" data-toggle="collapse"><i class="fa fa-expand"></i>&nbsp;Toggle source code ...</a>');
+
+                    checkWidth($this);
+                    $(window).resize(function () {
+                        checkWidth($this);
+                    });
+                });
+            });
+
+            
+        </script>
+
+    </body>
+</html>
