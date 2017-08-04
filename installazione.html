@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>OpenSTAManager</title>
+
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,900,700,300|Open+Sans:400,800,700|Titillium+Web:600,400' type='text/css'>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/github.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="site-branding">
+                <h1 class="site-name">
+                    <a href="" >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
+                </h1>
+                <h2 class="site-description">Il gestionale open source per l'assistenza tecnica e la fatturazione</h2>
+            </div>
+
+            <div class="button-line">
+                <a href="https://github.com/devcode-it/openstamanager" target="_blank" class="btn btn-default">View on GitHub</a>
+                <a href="https://github.com/devcode-it/openstamanager/zipball/master" class="btn btn-default hidden-xs">Download .zip</a>
+                <a href="https://github.com/devcode-it/openstamanager/tarball/master" class="btn btn-default hidden-xs">Download .tar.gz</a>
+            </div>
+
+                            <a href="https://github.com/devcode-it/openstamanager">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                </a>
+            
+            <div class="text-left visible-xs-block" style="margin-left: 15px;">
+                <a href="#sidebar" data-toggle="collapse"><i class="fa fa-3x fa-bars" aria-hidden="true"></i></a>
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                                    <nav id="sidebar" class="col-sm-3 col-lg-2 collapse in" role="navigation">
+                                                    <p class="text-muted">
+                                Documentazione di base
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/index.html">
+                                            Home page
+                                        </a>
+                                    </li>
+                                                                    <li class="active">
+                                        <a href="/installazione.html">
+                                            Installazione
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/framework.html">
+                                            Framework
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/assets.html">
+                                            Assets
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/moduli.html">
+                                            Moduli
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Approfondimenti
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/api.html">
+                                            API
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://www.openstamanager.com/">
+                                            Sito ufficiale
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
+                    </nav>
+
+                
+                <section class="col-sm-9 col-lg-10 content">
+                    <h1 id="installazione">Installazione</h1>
+<!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
+<ul>
+<li><a href="#tabella-dei-contenuti">Tabella dei contenuti</a></li>
+<li><a href="#requisiti">Requisiti</a></li>
+<li><a href="#installazione">Installazione</a>
+<ul>
+<li><a href="#versioni">Versioni</a></li>
+<li><a href="#sourceforge">SourceForge</a></li>
+</ul></li>
+<li><a href="#strumenti-utili">Strumenti utili</a>
+<ul>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#mac">MAC</a></li>
+</ul></li>
+<li><a href="#problemi-comuni">Problemi comuni</a>
+<ul>
+<li><a href="#schermata-bianca-iniziale">Schermata bianca iniziale</a></li>
+<li><a href="#blocco-dellinstallazione-allo-0%25">Blocco dell'installazione allo 0%</a></li>
+</ul></li>
+</ul>
+<!-- /TOC -->
+<h2 id="requisiti">Requisiti</h2>
+<p>Prima di iniziare l'installazione, è necessario procedere al download di una versione del progetto da <a href="https://sourceforge.net/p/openstamanager/">SourceForge</a>. Si consiglia inoltre di controllare che i prerequisiti del software, elencati di seguito, siano soddisfatti.</p>
+<p>L'installazione del gestionale richiede la presenza di un server web con abilitato il <a href="https://it.wikipedia.org/wiki/Database_management_system">DBMS (Database Management System)</a> MySQL e il linguaggio di programmazione <a href="http://php.net/">PHP</a>.</p>
+<ul>
+<li>PHP &gt;= 5.4 (si consiglia come minimo la versione 5.6 per poter usufruire di tutte le funzionalità del progetto)</li>
+<li>MySQL &gt;= 5.0</li>
+</ul>
+<h2 id="installazione-1">Installazione</h2>
+<p>Per procedere all'installazione è necessario seguire i seguenti punti:</p>
+<ol>
+<li>
+<p>Creare una cartella (ad esempio <code>openstamanager</code>) nella root del sever web installato ed estrarvi il contenuto della release scaricata. Il percorso della cartella root del server varia in base al software in utilizzo:</p>
+<ul>
+<li>LAMP (<code>/var/www/html</code>);</li>
+<li>XAMPP (<code>C:/xampp/htdocs</code> per Windows, <code>/opt/lampp/htdocs/</code> per Linux, <code>/Applications/XAMPP/htdocs/</code> per MAC);</li>
+<li>WAMP (<code>C:\wamp\www</code>);</li>
+<li>MAMP (<code>C:\MAMP\htdocs</code> per Windows, <code>/Applications/MAMP/htdocs</code> per MAC).</li>
+</ul>
+</li>
+<li>Creare un database vuoto (tramite <a href="http://localhost/phpmyadmin/">PHPMyAdmin</a> o riga di comando).</li>
+<li>Accedere a <a href="http://localhost/openstamanager">http://localhost/openstamanager</a> dal vostro browser.</li>
+<li>Inserire i dati per collegarsi al database e cliccare su <strong>Installa</strong> per completare l'installazione.</li>
+</ol>
+<p><strong>Attenzione</strong>: è possibile che l'installazione richieda del tempo. Si consiglia pertanto di attendere almeno qualche minuto senza alcun cambiamento nella pagina di installazione (in particolare, della progress bar presente) prima di cercare una possibile soluzione nelle discussioni del forum o nella sezione dedicata.</p>
+<h3 id="versioni">Versioni</h3>
+<p>Per mantenere un elevato grado di trasparenza riguardo al ciclo delle release, seguiamo le linee guida <a href="http://semver.org/">Semantic Versioning (SemVer)</a> per definire le versioni del progetto. Per vedere tutte le versioni disponibili al download, visitare la <a href="https://sourceforge.net/projects/openstamanager/files/">pagina relativa</a> su SourceForge.</p>
+<h3 id="sourceforge">SourceForge</h3>
+<p>Nel caso si stia utilizzando la versione direttamente ottenuta dalla repository di SourceForge, è necessario eseguire i seguenti comandi da linea di comando per completare le dipendenze PHP (tramite <a href="https://getcomposer.org/">Composer</a>) e gli asssets (tramite <a href="https://yarnpkg.com/">Yarn</a>) del progetto.</p>
+<pre><code class="language-bash">php composer.phar install
+php composer.phar update
+yarn global add gulp
+yarn install
+gulp</code></pre>
+<p>In alternativa alla sequenza di comandi precedente, è possibile utilizzare il seguente comando (richiede l'installazione di GIT e Yarn, oltre che l'inserimento dell'archivio <code>composer.phar</code> nella cartella principale del progetto):</p>
+<pre><code class="language-bash">yarn run develop-OSM</code></pre>
+<p>Per ulteriori informazioni, visitare le sezioni <a href="https://sourceforge.net/p/openstamanager/wiki/Assets/">Assets</a> e <a href="https://sourceforge.net/p/openstamanager/wiki/Framework/">Framework</a> della documentazione.</p>
+<h2 id="strumenti-utili">Strumenti utili</h2>
+<h3 id="windows">Windows</h3>
+<p>Per installare il server web si consiglia di scaricare <a href="http://www.wampserver.com/en/#download-wrapper">WAMP dal sito ufficiale</a>, seguendo l'installazione guidata senza particolari personalizzazioni.
+Una volta terminata l’installazione è necessario creare una cartella per il gestionale in <code>C:\wamp\www\</code>, copiando al suo interno il contenuto della release scaricata.</p>
+<h3 id="linux">Linux</h3>
+<p>Per installare il web server è necessario installare i pacchetti <code>apache2</code>, <code>php5</code> e <code>mysql-server</code>.</p>
+<pre><code class="language-bash">sudo apt-get install apache2 php5 mysql-server</code></pre>
+<p>Una volta completata l’installazione è necessario creare una cartella per il gestionale, copiandobi al suo interno il contenuto della release scaricata, nel web server di Apache2:</p>
+<ul>
+<li>nella versione &lt;= 2.3, la cartella si trova in <code>/var/www/</code>;</li>
+<li>nella versione &gt;= 2.4, la cartella si trova in <code>/var/www/html/</code>;</li>
+</ul>
+<p>E' inoltre necessario assicurarsi di concedere i permessi di scrittura sulla cartella creata:</p>
+<pre><code class="language-bash">sudo chmod 777 -R /var/www/</code></pre>
+<p>Si consiglia l'installazione del pacchetto <code>phpmyadmin</code>, per poter gestire graficamente il database MySQL:</p>
+<pre><code class="language-bash">sudo apt-get install phpmyadmin</code></pre>
+<h3 id="mac">MAC</h3>
+<p>La piattaforma Apple non è stata oggetto di molti test: pertanto si consiglia di individuare in prima persona un server web funzionante e con caratteristiche corrispondenti ai requisiti indicati.</p>
+<p>Il gestionale è stato testato con successo su Mac OS X con <a href="http://www.mamp.info/en/">MAMP</a> e XAMPP.</p>
+<h2 id="problemi-comuni">Problemi comuni</h2>
+<h3 id="schermata-bianca-iniziale">Schermata bianca iniziale</h3>
+<p><strong>Attenzione</strong>: a partire dalla versione 2.3 questa problema non è più presente.</p>
+<p>Nel caso si verifichi il problema di schermata bianca iniziale è necessario controllare i valori delle variabili <code>$rootdir</code> e <code>$docroot</code> nelle prime righe di <em>core.php</em>. Una possibile soluzione, implementata dalla versione 2.3, potrebbe essere:</p>
+<pre><code class="language-php">$docroot = __DIR__;
+$rootdir = substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/'));
+if (strrpos($rootdir, '/'.basename($docroot).'/') !== false) {
+    $rootdir = substr($rootdir, 0, strrpos($rootdir, '/'.basename($docroot).'/')).'/'.basename($docroot);
+}
+$rootdir = str_replace('%2F', '/', rawurlencode($rootdir));</code></pre>
+<p>Si ricorda comunque che:</p>
+<ul>
+<li><code>$docroot</code> deve corrispondere al percorso reale nel file system per raggiungere la cartella principale del gestionale.</li>
+<li><code>$rootdir</code> deve corrispondere al percorso URL del browser per raggiungere il gestionale nel server web.</li>
+</ul>
+<h3 id="blocco-dellinstallazione-allo-0">Blocco dell'installazione allo 0%</h3>
+<p><strong>Attenzione</strong>: a partire dalla versione 2.3 questa problema non è più presente.</p>
+<p>Nel caso l'installazione iniziale del database si blocchi allo 0% è probabilmente necessario effettuare una modifica nel file di impostazione del DBMS (<code>my.ini</code> nel caso di MySQL).</p>
+<pre><code class="language-ini">#sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+sql-mode="NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"</code></pre>
+<p>La riga preceduta da <code>#</code> è quella originale, mentre quella seguente è l'opzione che permette il corretto funzionamento dell'installazione.</p>
+<p>Discussioni originale:</p>
+<ul>
+<li><a href="http://www.openstamanager.com/forum/viewtopic.php?f=2&amp;t=86981">[RISOLTO] Tabelle Mancanti</a></li>
+<li><a href="http://stackoverflow.com/questions/21667601/mysql-running-in-strict-mode-and-giving-me-problems-how-to-fix-this">MySQL running in Strict Mode and giving me problems. How to fix this?</a></li>
+</ul>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="top-bar-line"></div>
+            <div class="bottom-panel">
+                <div class="text-center">
+            <span>
+                                                </span>
+                </div><!-- text-center -->
+            </div><!-- bottom-panel -->
+        </footer>
+
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+
+        <script>
+            hljs.initHighlighting();
+
+            function checkWidth($highlight) {
+                if ($(window).width() < 768) {
+                    $highlight.addClass('collapse');
+                } else {
+                    $highlight.removeClass('collapse');
+                }
+            }
+
+            $(document).ready(function () {
+                var $highlights = $('.hljs');
+                $highlights.each(function (index) {
+                    var $this = $(this).parent();
+                    var elementId = 'hljs' + index;
+                    $this.attr('id', elementId);
+                    $this.before('<a class="visible-xs-inline visible-sm-inline" href="#' + elementId + '" data-toggle="collapse"><i class="fa fa-expand"></i>&nbsp;Toggle source code ...</a>');
+
+                    checkWidth($this);
+                    $(window).resize(function () {
+                        checkWidth($this);
+                    });
+                });
+            });
+
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>OpenSTAManager</title>
+
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,900,700,300|Open+Sans:400,800,700|Titillium+Web:600,400' type='text/css'>
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/github.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="site-branding">
+                <h1 class="site-name">
+                    <a href="" >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
+                </h1>
+                <h2 class="site-description">Il gestionale open source per l'assistenza tecnica e la fatturazione</h2>
+            </div>
+
+            <div class="button-line">
+                <a href="https://github.com/devcode-it/openstamanager" target="_blank" class="btn btn-default">View on GitHub</a>
+                <a href="https://github.com/devcode-it/openstamanager/zipball/master" class="btn btn-default hidden-xs">Download .zip</a>
+                <a href="https://github.com/devcode-it/openstamanager/tarball/master" class="btn btn-default hidden-xs">Download .tar.gz</a>
+            </div>
+
+                            <a href="https://github.com/devcode-it/openstamanager">
+                    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+                </a>
+            
+            <div class="text-left visible-xs-block" style="margin-left: 15px;">
+                <a href="#sidebar" data-toggle="collapse"><i class="fa fa-3x fa-bars" aria-hidden="true"></i></a>
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <div class="row">
+
+                                    <nav id="sidebar" class="col-sm-3 col-lg-2 collapse in" role="navigation">
+                                                    <p class="text-muted">
+                                Documentazione di base
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/index.html">
+                                            Home page
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/installazione.html">
+                                            Installazione
+                                        </a>
+                                    </li>
+                                                                    <li class="active">
+                                        <a href="/framework.html">
+                                            Framework
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/assets.html">
+                                            Assets
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="/moduli.html">
+                                            Moduli
+                                        </a>
+                                    </li>
+                                                            </ul>
+                                                    <p class="text-muted">
+                                Approfondimenti
+                            </p>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                                                    <li class="">
+                                        <a href="/api.html">
+                                            API
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="http://www.openstamanager.com/">
+                                            Sito ufficiale
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
+                    </nav>
+
+                
+                <section class="col-sm-9 col-lg-10 content">
+                    <h1 id="framework">Framework</h1>
+<blockquote>
+<p>Un framework, termine della lingua inglese che può essere tradotto come intelaiatura o struttura, in informatica e specificatamente nello sviluppo software, è un'architettura logica di supporto (spesso un'implementazione logica di un particolare design pattern) su cui un software può essere progettato e realizzato, spesso facilitandone lo sviluppo da parte del programmatore.</p>
+<p>-- <cite><a href="https://it.wikipedia.org/wiki/Framework">Wikipedia</a></cite></p>
+</blockquote>
+<p>Il progetto utilizza <a href="https://getcomposer.org/">Composer</a> per gestire le librerie PHP in modo completamente gratuito e open source. Questo permette di completare l'installazione e l'aggiornamento dei diversi framework in modo facile ed intuitivo, senza doversi preoccupare in modo eccessivo delle dipendenze delle diverse librerie.</p>
+<!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
+<ul>
+<li><a href="#struttura">Struttura</a></li>
+<li><a href="#personalizzazione">Personalizzazione</a>
+<ul>
+<li><a href="#aggiornamento">Aggiornamento</a></li>
+<li><a href="#installazione-di-nuovi-pacchetti">Installazione di nuovi pacchetti</a></li>
+</ul></li>
+<li><a href="#framework-predefiniti">Framework predefiniti</a></li>
+</ul>
+<!-- /TOC -->
+<h2 id="struttura">Struttura</h2>
+<p>I framework vengono automaticamente scaricati da Composer all'interno della cartella <em>vendor</em> nella root del progetto, dove vengono memorizzati secondo un percorso derivante dall'origine del pacchetto (per maggiori informazioni, consultare la <a href="https://getcomposer.org/doc/">documentazione ufficiale di Composer</a>).</p>
+<p>La modifica dei contenuti di <code>vendor</code> è altamente sconsigliata, poichè qualunque aggiornamento potrebbe sovrascrivere ed annullare le modifiche effettuate.</p>
+<h2 id="personalizzazione">Personalizzazione</h2>
+<p>Nel caso si rivelasse necessario aggiornare i framework presenti o installare nuove librerie, è necessario avere disponibile una corretta e funzionante <a href="https://getcomposer.org/download/">installazione locale di Composer</a>.</p>
+<p>Una volta completata l'installazione di Composer è possibile, partendo dalla cartella del gestionale, iniziare l'aggiornamento e la personalizzazione tramite le seguenti operazioni.</p>
+<h3 id="aggiornamento">Aggiornamento</h3>
+<p>L'aggiornamento dei framework è effettuabile tramite il seguente comando:</p>
+<pre><code class="language-bash">php composer.phar update</code></pre>
+<p>Per ulteriori informazioni, consultare la <a href="https://getcomposer.org/doc/">documentazione ufficiale di Composer</a>.</p>
+<h3 id="installazione-di-nuovi-pacchetti">Installazione di nuovi pacchetti</h3>
+<p>Per installare nuovi framework e/o librerie è utilizzabile il seguente comando:</p>
+<pre><code class="language-bash">php composer.phar require &lt;package&gt;</code></pre>
+<p>Per ulteriori informazioni, consultare la <a href="https://getcomposer.org/doc/">documentazione ufficiale di Composer</a>.</p>
+<h2 id="framework-predefiniti">Framework predefiniti</h2>
+<ul>
+<li>ezyang/htmlpurifier</li>
+<li>filp/whoops</li>
+<li>intervention/image</li>
+<li>ircmaxell/password-compat</li>
+<li>maximebf/debugbar</li>
+<li>monolog/monolog</li>
+<li>phpmailer/phpmailer</li>
+<li>spipu/html2pdf</li>
+<li>symfony/translation</li>
+</ul>
+<p><em>I nomi sono indicati secondo la notazione tipica dei progetti pubblici su Github.</em></p>
+                </section>
+
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="top-bar-line"></div>
+            <div class="bottom-panel">
+                <div class="text-center">
+            <span>
+                                                </span>
+                </div><!-- text-center -->
+            </div><!-- bottom-panel -->
+        </footer>
+
+
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+
+        <script>
+            hljs.initHighlighting();
+
+            function checkWidth($highlight) {
+                if ($(window).width() < 768) {
+                    $highlight.addClass('collapse');
+                } else {
+                    $highlight.removeClass('collapse');
+                }
+            }
+
+            $(document).ready(function () {
+                var $highlights = $('.hljs');
+                $highlights.each(function (index) {
+                    var $this = $(this).parent();
+                    var elementId = 'hljs' + index;
+                    $this.attr('id', elementId);
+                    $this.before('<a class="visible-xs-inline visible-sm-inline" href="#' + elementId + '" data-toggle="collapse"><i class="fa fa-expand"></i>&nbsp;Toggle source code ...</a>');
+
+                    checkWidth($this);
+                    $(window).resize(function () {
+                        checkWidth($this);
+                    });
+                });
+            });
+
+            
+        </script>
+
+    </body>
+</html>
