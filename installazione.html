@@ -7,17 +7,17 @@
         <title>OpenSTAManager</title>
 
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,900,700,300|Open+Sans:400,800,700|Titillium+Web:600,400' type='text/css'>
-        <link rel="stylesheet" href="/openstamanager/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/openstamanager/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/openstamanager/css/github.css">
-        <link rel="stylesheet" href="/openstamanager/css/main.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/github.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
 
         <header class="site-header">
             <div class="site-branding">
                 <h1 class="site-name">
-                    <a href="/openstamanager" >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
+                    <a href="." >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
                 </h1>
                 <h2 class="site-description">Il gestionale open source per l'assistenza tecnica e la fatturazione</h2>
             </div>
@@ -47,27 +47,27 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                                                     <li class="">
-                                        <a href="/openstamanager/index.html">
+                                        <a href="./index.html">
                                             Home page
                                         </a>
                                     </li>
                                                                     <li class="active">
-                                        <a href="/openstamanager/installazione.html">
+                                        <a href="./installazione.html">
                                             Installazione
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/framework.html">
+                                        <a href="./framework.html">
                                             Framework
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/assets.html">
+                                        <a href="./assets.html">
                                             Assets
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/moduli.html">
+                                        <a href="./moduli.html">
                                             Moduli
                                         </a>
                                     </li>
@@ -78,8 +78,13 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                                                     <li class="">
-                                        <a href="/openstamanager/api.html">
+                                        <a href="./api.html">
                                             API
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="./docs/">
+                                            Documentazione completa
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -101,7 +106,7 @@
 <li><a href="#installazione">Installazione</a>
 <ul>
 <li><a href="#versioni">Versioni</a></li>
-<li><a href="#sourceforge">SourceForge</a></li>
+<li><a href="#github">Github</a></li>
 </ul></li>
 <li><a href="#strumenti-utili">Strumenti utili</a>
 <ul>
@@ -117,7 +122,7 @@
 </ul>
 <!-- /TOC -->
 <h2 id="requisiti">Requisiti</h2>
-<p>Prima di iniziare l'installazione, è necessario procedere al download di una versione del progetto da <a href="https://sourceforge.net/p/openstamanager/">SourceForge</a>. Si consiglia inoltre di controllare che i prerequisiti del software, elencati di seguito, siano soddisfatti.</p>
+<p>Prima di iniziare l'installazione, è necessario procedere al download di una versione del progetto da <a href="https://github.com/devcode-it/openstamanager">Github</a>. Si consiglia inoltre di controllare che i prerequisiti del software, elencati di seguito, siano soddisfatti.</p>
 <p>L'installazione del gestionale richiede la presenza di un server web con abilitato il <a href="https://it.wikipedia.org/wiki/Database_management_system">DBMS (Database Management System)</a> MySQL e il linguaggio di programmazione <a href="http://php.net/">PHP</a>.</p>
 <ul>
 <li>PHP &gt;= 5.4 (si consiglia come minimo la versione 5.6 per poter usufruire di tutte le funzionalità del progetto)</li>
@@ -141,9 +146,9 @@
 </ol>
 <p><strong>Attenzione</strong>: è possibile che l'installazione richieda del tempo. Si consiglia pertanto di attendere almeno qualche minuto senza alcun cambiamento nella pagina di installazione (in particolare, della progress bar presente) prima di cercare una possibile soluzione nelle discussioni del forum o nella sezione dedicata.</p>
 <h3 id="versioni">Versioni</h3>
-<p>Per mantenere un elevato grado di trasparenza riguardo al ciclo delle release, seguiamo le linee guida <a href="http://semver.org/">Semantic Versioning (SemVer)</a> per definire le versioni del progetto. Per vedere tutte le versioni disponibili al download, visitare la <a href="https://sourceforge.net/projects/openstamanager/files/">pagina relativa</a> su SourceForge.</p>
-<h3 id="sourceforge">SourceForge</h3>
-<p>Nel caso si stia utilizzando la versione direttamente ottenuta dalla repository di SourceForge, è necessario eseguire i seguenti comandi da linea di comando per completare le dipendenze PHP (tramite <a href="https://getcomposer.org/">Composer</a>) e gli asssets (tramite <a href="https://yarnpkg.com/">Yarn</a>) del progetto.</p>
+<p>Per mantenere un elevato grado di trasparenza riguardo al ciclo delle release, seguiamo le linee guida <a href="http://semver.org/">Semantic Versioning (SemVer)</a> per definire le versioni del progetto. Per vedere tutte le versioni disponibili al download, visitare la <a href="https://github.com/devcode-it/openstamanager/releases">pagina relativa</a> su Github (per versioni precedenti alla 2.3, visitare <a href="https://sourceforge.net/projects/openstamanager/files/">SourceForge</a>).</p>
+<h3 id="github">Github</h3>
+<p>Nel caso si stia utilizzando la versione direttamente ottenuta dalla repository di Github, è necessario eseguire i seguenti comandi da linea di comando per completare le dipendenze PHP (tramite <a href="https://getcomposer.org/">Composer</a>) e gli asssets (tramite <a href="https://yarnpkg.com/">Yarn</a>) del progetto.</p>
 <pre><code class="language-bash">php composer.phar install
 php composer.phar update
 yarn global add gulp
@@ -151,7 +156,7 @@ yarn install
 gulp</code></pre>
 <p>In alternativa alla sequenza di comandi precedente, è possibile utilizzare il seguente comando (richiede l'installazione di GIT e Yarn, oltre che l'inserimento dell'archivio <code>composer.phar</code> nella cartella principale del progetto):</p>
 <pre><code class="language-bash">yarn run develop-OSM</code></pre>
-<p>Per ulteriori informazioni, visitare le sezioni <a href="https://sourceforge.net/p/openstamanager/wiki/Assets/">Assets</a> e <a href="https://sourceforge.net/p/openstamanager/wiki/Framework/">Framework</a> della documentazione.</p>
+<p>Per ulteriori informazioni, visitare le sezioni <a href="https://devcode-it.github.io/openstamanager/assets.html">Assets</a> e <a href="https://devcode-it.github.io/openstamanager/framework.html">Framework</a> della documentazione.</p>
 <h2 id="strumenti-utili">Strumenti utili</h2>
 <h3 id="windows">Windows</h3>
 <p>Per installare il server web si consiglia di scaricare <a href="http://www.wampserver.com/en/#download-wrapper">WAMP dal sito ufficiale</a>, seguendo l'installazione guidata senza particolari personalizzazioni.
@@ -215,7 +220,7 @@ sql-mode="NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"</code></pre>
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="/openstamanager/js/highlight.pack.js"></script>
+        <script src="./js/highlight.pack.js"></script>
 
         <script>
             hljs.initHighlighting();

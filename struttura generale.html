@@ -7,17 +7,17 @@
         <title>OpenSTAManager</title>
 
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,900,700,300|Open+Sans:400,800,700|Titillium+Web:600,400' type='text/css'>
-        <link rel="stylesheet" href="/openstamanager/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/openstamanager/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/openstamanager/css/github.css">
-        <link rel="stylesheet" href="/openstamanager/css/main.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/github.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
 
         <header class="site-header">
             <div class="site-branding">
                 <h1 class="site-name">
-                    <a href="/openstamanager" >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
+                    <a href="." >OpenSTAManager</a>&nbsp;&nbsp;<i class="fa fa-cog"></i>
                 </h1>
                 <h2 class="site-description">Il gestionale open source per l'assistenza tecnica e la fatturazione</h2>
             </div>
@@ -47,27 +47,27 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                                                     <li class="">
-                                        <a href="/openstamanager/index.html">
+                                        <a href="./index.html">
                                             Home page
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/installazione.html">
+                                        <a href="./installazione.html">
                                             Installazione
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/framework.html">
+                                        <a href="./framework.html">
                                             Framework
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/assets.html">
+                                        <a href="./assets.html">
                                             Assets
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="/openstamanager/moduli.html">
+                                        <a href="./moduli.html">
                                             Moduli
                                         </a>
                                     </li>
@@ -78,8 +78,13 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                                                     <li class="">
-                                        <a href="/openstamanager/api.html">
+                                        <a href="./api.html">
                                             API
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="./docs/">
+                                            Documentazione completa
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -93,9 +98,16 @@
 
                 
                 <section class="col-sm-9 col-lg-10 content">
-                    <h1 id="nucleo">Nucleo</h1>
+                    <h1 id="struttura-generale">Struttura generale</h1>
 <!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
 <ul>
+<li><a href="#caratteristiche">Caratteristiche</a>
+<ul>
+<li><a href="#open-source">Open source</a></li>
+<li><a href="#modulare-e-personalizzabile">Modulare e personalizzabile</a></li>
+<li><a href="#multipiattaforma-e-user-friendly">Multipiattaforma e user friendly</a></li>
+</ul></li>
+<li><a href="#struttura">Struttura</a></li>
 <li><a href="#root">Root</a>
 <ul>
 <li><a href="#addphp">add.php</a></li>
@@ -146,7 +158,21 @@
 <li><a href="#cartella-vendor">Cartella vendor</a></li>
 </ul>
 <!-- /TOC -->
-<p>Scaricando la versione SVN del progetto dovreste trovare una struttura di base molto simile a quella seguente.</p>
+<h2 id="caratteristiche">Caratteristiche</h2>
+<h3 id="open-source">Open source</h3>
+<p>La natura open source (termine inglese che significa <em>sorgente aperta</em>) del progetto evidenzia lo spirito di collaborazione e condivisione che pervade l'attività di sviluppo del gestionale, di cui gli autori rendono pubblico il codice sorgente e ne favoriscono il libero studio, permettendo a programmatori indipendenti di apportarvi modifiche ed estensioni.</p>
+<p>Particolarmente espressiva in questo senso risulta essere la documentazione ufficiale del progetto:</p>
+<blockquote>
+<p>Il progetto è un software open source perché permette agli utilizzatori di studiarne il funzionamento ed adattarlo alle proprie esigenze; inoltre, in ambito commerciale, non obbliga l'utilizzatore ad essere legato allo stesso fornitore di assistenza.</p>
+</blockquote>
+<p>La licenza in utilizzo è la GNU General Public License 3.0 (GPL 3.0).</p>
+<h3 id="modulare-e-personalizzabile">Modulare e personalizzabile</h3>
+<p>OpenSTAManager possiede una struttura fortemente modulare, che ne permette la rapida espandibilità e, nello specifico,  la realizzazione di funzionalità <em>ad hoc</em>, personalizzate nel modo più completo secondo le richieste del cliente.</p>
+<h3 id="multipiattaforma-e-user-friendly">Multipiattaforma e user friendly</h3>
+<p>Il progetto risulta compatibile con numerose piattaforme, necessitando esclusivamente un browser moderno da parte dei suoi utilizzatori per sfruttare appieno le sue potenzialità.
+L'interfaccia di interazione con l'utente finale risulta inoltre estremamente semplificata e <em>user friendly</em>, oltre che <em>responsive</em>, presentando caratteristiche completamente compatibili con tutti i dispositivi mobili (in particolare, tablet e smartphone).</p>
+<h2 id="struttura">Struttura</h2>
+<p>Scaricando la versione GIT del progetto dovreste trovare una struttura di base molto simile a quella seguente.</p>
 <pre><code>.
 ├── api
 ├── assets
@@ -279,7 +305,7 @@ Per maggiori informazioni riguardanti la cartella <code>templates</code> e i suo
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="/openstamanager/js/highlight.pack.js"></script>
+        <script src="./js/highlight.pack.js"></script>
 
         <script>
             hljs.initHighlighting();
