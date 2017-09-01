@@ -89,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_instance">
-                    static                    protected                                        <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
+                    static                    protected                                        <abbr title="Util\Util\Singleton">Singleton</abbr>
                 </td>
                 <td>$instance</td>
                 <td class="last"></td>
@@ -97,7 +97,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_host">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$host</td>
                 <td class="last"></td>
@@ -105,7 +105,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_port">
-                                        protected                                        
+                                        protected                                        int
                 </td>
                 <td>$port</td>
                 <td class="last"></td>
@@ -113,7 +113,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_username">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$username</td>
                 <td class="last"></td>
@@ -121,7 +121,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_password">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$password</td>
                 <td class="last"></td>
@@ -129,7 +129,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_database_name">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$database_name</td>
                 <td class="last"></td>
@@ -137,7 +137,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_charset">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$charset</td>
                 <td class="last"></td>
@@ -145,23 +145,15 @@
             </tr>
                     <tr>
                 <td class="type" id="property_option">
-                                        protected                                        
+                                        protected                                        array
                 </td>
                 <td>$option</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_connection">
-                    static                    protected                                        
-                </td>
-                <td>$connection</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_pdo">
-                                        protected                                        
+                                        protected                                        <abbr title="DebugBar\DataCollector\PDO\TraceablePDO">TraceablePDO</abbr>
                 </td>
                 <td>$pdo</td>
                 <td class="last"></td>
@@ -169,7 +161,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_is_installed">
-                                        protected                                        
+                                        protected                                        bool
                 </td>
                 <td>$is_installed</td>
                 <td class="last"></td>
@@ -177,7 +169,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_mysql_version">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$mysql_version</td>
                 <td class="last"></td>
@@ -194,7 +186,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string|array $server, string $username, string $password, string $database_name, string $charset = &#039;utf8mb4&#039;, array $option = [\PDO::ATTR_ERRMODE =&gt; \PDO::ERRMODE_EXCEPTION])
+                    <a href="#method___construct">__construct</a>(string|array $server, string $username, string $password, string $database_name, string $charset = null, array $option = [\PDO::ATTR_ERRMODE =&gt; \PDO::ERRMODE_EXCEPTION])
         
                                             <p>Costruisce la nuova connessione al database.</p>                </div>
                 <div class="col-md-2"></div>
@@ -216,8 +208,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___clone">__clone</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -227,8 +218,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___wakeup">__wakeup</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -306,7 +296,7 @@
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchArray">fetchArray</a>($query, $numeric = false)
+                    <a href="#method_fetchArray">fetchArray</a>($query, $numeric = false, $options = [])
         
                                             <p>Restituisce un'array strutturato in base ai nomi degli attributi della selezione.</p>                </div>
                 <div class="col-md-2"></div>
@@ -413,10 +403,40 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sync">sync</a>(string $table, array $conditions, array $list)
+        
+                                            <p>Sincronizza i valori indicati associati alle condizioni, rimuovendo le combinazioni aggiuntive e inserendo quelle non ancora presenti.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_attach">attach</a>(string $table, array $conditions, array $list)
+        
+                                            <p>Inserisce le le combinazioni tra i valori indicati e le condizioni.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_detach">detach</a>(string $table, array $conditions, array $list)
+        
+                                            <p>Rimuove le le combinazioni tra i valori indicati e le condizioni.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getValue">getValue</a>(string $value)
+                    <a href="#method_prepareValue">prepareValue</a>($field, $value)
         
                                             <p>Predispone una variabile per il relativo inserimento all'interno di uno statement SQL.</p>                </div>
                 <div class="col-md-2"></div>
@@ -459,9 +479,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 40</div>
+        <div class="location">at         line 49</div>
         <code>            protected        
-    <strong>__construct</strong>(string|array $server, string $username, string $password, string $database_name, string $charset = &#039;utf8mb4&#039;, array $option = [\PDO::ATTR_ERRMODE =&gt; \PDO::ERRMODE_EXCEPTION])
+    <strong>__construct</strong>(string|array $server, string $username, string $password, string $database_name, string $charset = null, array $option = [\PDO::ATTR_ERRMODE =&gt; \PDO::ERRMODE_EXCEPTION])
         </code>
     </h3>
     <div class="details">
@@ -515,7 +535,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInstance">
-        <div class="location">at         line 107</div>
+        <div class="location">at         line 137</div>
         <code>        static            <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
     <strong>getInstance</strong>()
         </code>
@@ -545,7 +565,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 33</div>
+        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 41</div>
         <code>                private    
     <strong>__clone</strong>()
         </code>
@@ -554,6 +574,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -564,7 +586,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 37</div>
+        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 48</div>
         <code>                private    
     <strong>__wakeup</strong>()
         </code>
@@ -573,6 +595,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -583,7 +607,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getConnection">
-        <div class="location">at         line 91</div>
+        <div class="location">at         line 121</div>
         <code>        static            <a href="Database.html">Database</a>
     <strong>getConnection</strong>($new = false)
         </code>
@@ -623,7 +647,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPDO">
-        <div class="location">at         line 119</div>
+        <div class="location">at         line 149</div>
         <code>                    <abbr title="DebugBar\DataCollector\PDO\TraceablePDO">TraceablePDO</abbr>
     <strong>getPDO</strong>()
         </code>
@@ -653,7 +677,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isConnected">
-        <div class="location">at         line 131</div>
+        <div class="location">at         line 161</div>
         <code>                    bool
     <strong>isConnected</strong>()
         </code>
@@ -683,7 +707,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isInstalled">
-        <div class="location">at         line 143</div>
+        <div class="location">at         line 173</div>
         <code>                    bool
     <strong>isInstalled</strong>()
         </code>
@@ -713,7 +737,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMySQLVersion">
-        <div class="location">at         line 159</div>
+        <div class="location">at         line 189</div>
         <code>                    int
     <strong>getMySQLVersion</strong>()
         </code>
@@ -743,7 +767,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDatabaseName">
-        <div class="location">at         line 178</div>
+        <div class="location">at         line 208</div>
         <code>                    string
     <strong>getDatabaseName</strong>()
         </code>
@@ -773,7 +797,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_query">
-        <div class="location">at         line 192</div>
+        <div class="location">at         line 222</div>
         <code>                    int
     <strong>query</strong>($query, $signal = null, $options = [])
         </code>
@@ -823,9 +847,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchArray">
-        <div class="location">at         line 218</div>
+        <div class="location">at         line 248</div>
         <code>                    array
-    <strong>fetchArray</strong>($query, $numeric = false)
+    <strong>fetchArray</strong>($query, $numeric = false, $options = [])
         </code>
     </h3>
     <div class="details">
@@ -848,6 +872,11 @@
                 <td>$numeric</td>
                 <td></td>
             </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
+                <td></td>
+            </tr>
             </table>
 
             
@@ -868,7 +897,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchRows">
-        <div class="location">at         line 241</div>
+        <div class="location">at         line 271</div>
         <code>                    array
     <strong>fetchRows</strong>(string $query)
         <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
@@ -915,7 +944,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchRow">
-        <div class="location">at         line 256</div>
+        <div class="location">at         line 286</div>
         <code>                    array
     <strong>fetchRow</strong>(string $query)
         <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
@@ -962,7 +991,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchNum">
-        <div class="location">at         line 275</div>
+        <div class="location">at         line 305</div>
         <code>                    array
     <strong>fetchNum</strong>(string $query)
         </code>
@@ -1002,7 +1031,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_last_inserted_id">
-        <div class="location">at         line 293</div>
+        <div class="location">at         line 323</div>
         <code>                    int
     <strong>last_inserted_id</strong>()
         <small><sup><span class="label label-danger">deprecated</span></sup></small></code>
@@ -1039,7 +1068,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lastInsertedID">
-        <div class="location">at         line 305</div>
+        <div class="location">at         line 335</div>
         <code>                    int
     <strong>lastInsertedID</strong>()
         </code>
@@ -1069,7 +1098,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_prepare">
-        <div class="location">at         line 324</div>
+        <div class="location">at         line 354</div>
         <code>                    string
     <strong>prepare</strong>(string $parameter)
         </code>
@@ -1109,7 +1138,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_quote">
-        <div class="location">at         line 338</div>
+        <div class="location">at         line 368</div>
         <code>            protected        string
     <strong>quote</strong>($string)
         </code>
@@ -1149,7 +1178,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_insert">
-        <div class="location">at         line 354</div>
+        <div class="location">at         line 386</div>
         <code>                    string|array
     <strong>insert</strong>(string $table, array $array, bool $return = false)
         </code>
@@ -1199,7 +1228,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_update">
-        <div class="location">at         line 400</div>
+        <div class="location">at         line 432</div>
         <code>                    string|array
     <strong>update</strong>(string $table, array $array, array $conditions, bool $return = false)
         </code>
@@ -1254,7 +1283,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_select">
-        <div class="location">at         line 439</div>
+        <div class="location">at         line 471</div>
         <code>                    string|array
     <strong>select</strong>(string $table, array $array = [], array $conditions = [], array $order = [], string|array $limit = null, bool $return = false)
         </code>
@@ -1318,10 +1347,133 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getValue">
-        <div class="location">at         line 498</div>
+                    <h3 id="method_sync">
+        <div class="location">at         line 530</div>
+        <code>                    
+    <strong>sync</strong>(string $table, array $conditions, array $list)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sincronizza i valori indicati associati alle condizioni, rimuovendo le combinazioni aggiuntive e inserendo quelle non ancora presenti.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td>Condizioni di sincronizzazione</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td>Valori da sincronizzare</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_attach">
+        <div class="location">at         line 562</div>
+        <code>                    
+    <strong>attach</strong>(string $table, array $conditions, array $list)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Inserisce le le combinazioni tra i valori indicati e le condizioni.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td>Condizioni</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td>Valori da aggiungere</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_detach">
+        <div class="location">at         line 594</div>
+        <code>                    
+    <strong>detach</strong>(string $table, array $conditions, array $list)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rimuove le le combinazioni tra i valori indicati e le condizioni.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$conditions</td>
+                <td>Condizioni</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$list</td>
+                <td>Valori da rimuovere</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_prepareValue">
+        <div class="location">at         line 628</div>
         <code>            protected        string
-    <strong>getValue</strong>(string $value)
+    <strong>prepareValue</strong>($field, $value)
         </code>
     </h3>
     <div class="details">
@@ -1335,7 +1487,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
                 <td>$value</td>
                 <td></td>
             </tr>
@@ -1359,7 +1516,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_whereStatement">
-        <div class="location">at         line 522</div>
+        <div class="location">at         line 652</div>
         <code>            protected        string
     <strong>whereStatement</strong>(string|array $where, bool $and = true)
         </code>
@@ -1404,7 +1561,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_multiQuery">
-        <div class="location">at         line 561</div>
+        <div class="location">at         line 691</div>
         <code>                    
     <strong>multiQuery</strong>($filename, $start)
         </code>
@@ -1440,7 +1597,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_signal">
-        <div class="location">at         line 587</div>
+        <div class="location">at         line 716</div>
         <code>            protected        
     <strong>signal</strong>($e, $message, $options = [])
         </code>

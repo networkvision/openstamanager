@@ -89,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_instance">
-                    static                    protected                                        <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
+                    static                    protected                                        <abbr title="Util\Util\Singleton">Singleton</abbr>
                 </td>
                 <td>$instance</td>
                 <td class="last"></td>
@@ -97,15 +97,23 @@
             </tr>
                     <tr>
                 <td class="type" id="property_status">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$status</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_passwordOptions">
+                    static                    protected                                        array
+                </td>
+                <td>$passwordOptions</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_infos">
-                                        protected                                        
+                                        protected                                        array
                 </td>
                 <td>$infos</td>
                 <td class="last"></td>
@@ -113,17 +121,9 @@
             </tr>
                     <tr>
                 <td class="type" id="property_first_module">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$first_module</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_passwordOptions">
-                                        protected                                        
-                </td>
-                <td>$passwordOptions</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -140,8 +140,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Protected constructor to prevent creating a new instance of the <b>Singleton</b> via the <code>new</code> operator from outside of this class.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -161,8 +160,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___clone">__clone</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -172,19 +170,17 @@
                 <div class="col-md-8 type">
                     <a href="#method___wakeup">__wakeup</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_attempt">attempt</a>($username, $password)
+                    <a href="#method_attempt">attempt</a>(string $username, string $password)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Effettua un tentativo di accesso con le credenziali fornite.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -192,10 +188,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_password_check">password_check</a>($password, $hash, $user_id = null)
+                    <a href="#method_password_check">password_check</a>(string $password, string $hash, int $user_id = null)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla la corrispondeza delle password ed eventalmente effettua un rehashing.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -205,8 +200,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_saveToSession">saveToSession</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Memorizza le informazioni riguardanti l'utente all'interno della sessione.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -214,43 +208,39 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_identifyUser">identifyUser</a>($user_id)
+                    <a href="#method_identifyUser">identifyUser</a>(int $user_id)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Identifica l'utente interessato dall'autenticazione.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isAuthenticated">isAuthenticated</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se l'utente è autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isAdmin">isAdmin</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se l'utente appartiene al gruppo degli Amministratori.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getUser">getUser</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce le informazioni riguardanti l'utente autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -260,52 +250,67 @@
                 <div class="col-md-8 type">
                     <a href="#method_destory">destory</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Distrugge le informazioni riguardanti l'utente autenticato, forzando il logout.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFirstModule">getFirstModule</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce il nome del primo modulo navigabile dall'utente autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hashPassword">hashPassword</a>(string $password)
+        
+                                            <p>Restituisce l'hashing della password per la relativa memorizzazione nel database.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatus">getStatus</a>()
+        
+                                            <p>Restituisce l'elenco degli stati del sistema di autenticazione.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_check">check</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se l'utente è autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_admin">admin</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se l'utente appartiene al gruppo degli Amministratori.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_user">user</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce le informazioni riguardanti l'utente autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -315,30 +320,17 @@
                 <div class="col-md-8 type">
                     <a href="#method_logout">logout</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Distrugge le informazioni riguardanti l'utente autenticato, forzando il logout.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_firstModule">firstModule</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getStatus">getStatus</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce il nome del primo modulo navigabile dall'utente autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -349,7 +341,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 41</div>
         <code>            protected        
     <strong>__construct</strong>()
         </code>
@@ -358,6 +350,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Protected constructor to prevent creating a new instance of the <b>Singleton</b> via the <code>new</code> operator from outside of this class.</p>                                                </div>
                 <div class="tags">
             
             
@@ -368,7 +362,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInstance">
-        <div class="location">in <a href="Util/Singleton.html#method_getInstance"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 22</div>
+        <div class="location">in <a href="Util/Singleton.html#method_getInstance"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 27</div>
         <code>        static            <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
     <strong>getInstance</strong>()
         </code>
@@ -398,7 +392,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 33</div>
+        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 41</div>
         <code>                private    
     <strong>__clone</strong>()
         </code>
@@ -407,6 +401,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -417,7 +413,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 37</div>
+        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 48</div>
         <code>                private    
     <strong>__wakeup</strong>()
         </code>
@@ -426,6 +422,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -436,32 +434,43 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_attempt">
-        <div class="location">at         line 62</div>
-        <code>                    
-    <strong>attempt</strong>($username, $password)
+        <div class="location">at         line 75</div>
+        <code>                    bool
+    <strong>attempt</strong>(string $username, string $password)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Effettua un tentativo di accesso con le credenziali fornite.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$username</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$password</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -470,31 +479,33 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_password_check">
-        <div class="location">at         line 116</div>
+        <div class="location">at         line 136</div>
         <code>            protected        
-    <strong>password_check</strong>($password, $hash, $user_id = null)
+    <strong>password_check</strong>(string $password, string $hash, int $user_id = null)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla la corrispondeza delle password ed eventalmente effettua un rehashing.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$password</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$hash</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$user_id</td>
                 <td></td>
             </tr>
@@ -509,7 +520,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_saveToSession">
-        <div class="location">at         line 143</div>
+        <div class="location">at         line 166</div>
         <code>            protected        
     <strong>saveToSession</strong>()
         </code>
@@ -518,6 +529,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Memorizza le informazioni riguardanti l'utente all'interno della sessione.</p>                                                </div>
                 <div class="tags">
             
             
@@ -528,21 +541,23 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_identifyUser">
-        <div class="location">at         line 156</div>
+        <div class="location">at         line 184</div>
         <code>            protected        
-    <strong>identifyUser</strong>($user_id)
+    <strong>identifyUser</strong>(int $user_id)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Identifica l'utente interessato dall'autenticazione.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$user_id</td>
                 <td></td>
             </tr>
@@ -557,8 +572,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAuthenticated">
-        <div class="location">at         line 168</div>
-        <code>                    
+        <div class="location">at         line 206</div>
+        <code>                    bool
     <strong>isAuthenticated</strong>()
         </code>
     </h3>
@@ -566,8 +581,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se l'utente è autenticato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -576,8 +602,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAdmin">
-        <div class="location">at         line 173</div>
-        <code>                    
+        <div class="location">at         line 216</div>
+        <code>                    bool
     <strong>isAdmin</strong>()
         </code>
     </h3>
@@ -585,8 +611,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se l'utente appartiene al gruppo degli Amministratori.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -595,8 +632,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUser">
-        <div class="location">at         line 178</div>
-        <code>                    
+        <div class="location">at         line 226</div>
+        <code>                    array
     <strong>getUser</strong>()
         </code>
     </h3>
@@ -604,8 +641,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce le informazioni riguardanti l'utente autenticato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -614,7 +662,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destory">
-        <div class="location">at         line 183</div>
+        <div class="location">at         line 234</div>
         <code>                    
     <strong>destory</strong>()
         </code>
@@ -623,6 +671,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Distrugge le informazioni riguardanti l'utente autenticato, forzando il logout.</p>                                                </div>
                 <div class="tags">
             
             
@@ -633,8 +683,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFirstModule">
-        <div class="location">at         line 200</div>
-        <code>                    
+        <div class="location">at         line 256</div>
+        <code>                    string
     <strong>getFirstModule</strong>()
         </code>
     </h3>
@@ -642,8 +692,89 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce il nome del primo modulo navigabile dall'utente autenticato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hashPassword">
+        <div class="location">at         line 291</div>
+        <code>        static            string
+    <strong>hashPassword</strong>(string $password)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restituisce l'hashing della password per la relativa memorizzazione nel database.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at         line 301</div>
+        <code>        static            array
+    <strong>getStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restituisce l'elenco degli stati del sistema di autenticazione.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -652,8 +783,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">at         line 228</div>
-        <code>        static            
+        <div class="location">at         line 311</div>
+        <code>        static            bool
     <strong>check</strong>()
         </code>
     </h3>
@@ -661,8 +792,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se l'utente è autenticato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -671,8 +813,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_admin">
-        <div class="location">at         line 233</div>
-        <code>        static            
+        <div class="location">at         line 321</div>
+        <code>        static            bool
     <strong>admin</strong>()
         </code>
     </h3>
@@ -680,8 +822,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se l'utente appartiene al gruppo degli Amministratori.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -690,8 +843,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_user">
-        <div class="location">at         line 238</div>
-        <code>        static            
+        <div class="location">at         line 331</div>
+        <code>        static            array
     <strong>user</strong>()
         </code>
     </h3>
@@ -699,8 +852,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce le informazioni riguardanti l'utente autenticato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -709,7 +873,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_logout">
-        <div class="location">at         line 243</div>
+        <div class="location">at         line 339</div>
         <code>        static            
     <strong>logout</strong>()
         </code>
@@ -718,6 +882,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Distrugge le informazioni riguardanti l'utente autenticato, forzando il logout.</p>                                                </div>
                 <div class="tags">
             
             
@@ -728,8 +894,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_firstModule">
-        <div class="location">at         line 248</div>
-        <code>        static            
+        <div class="location">at         line 349</div>
+        <code>        static            string
     <strong>firstModule</strong>()
         </code>
     </h3>
@@ -737,27 +903,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce il nome del primo modulo navigabile dall'utente autenticato.</p>                                                </div>
                 <div class="tags">
             
-            
-            
-                    </div>
-    </div>
+                            <h4>Return Value</h4>
 
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getStatus">
-        <div class="location">at         line 253</div>
-        <code>        static            
-    <strong>getStatus</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
 
-                <div class="tags">
-            
             
             
                     </div>

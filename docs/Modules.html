@@ -89,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_current_module">
-                    static                    protected                                        
+                    static                    protected                                        int
                 </td>
                 <td>$current_module</td>
                 <td class="last"></td>
@@ -97,7 +97,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_current_element">
-                    static                    protected                                        
+                    static                    protected                                        int
                 </td>
                 <td>$current_element</td>
                 <td class="last"></td>
@@ -105,7 +105,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_modules">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$modules</td>
                 <td class="last"></td>
@@ -113,7 +113,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_additionals">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$additionals</td>
                 <td class="last"></td>
@@ -121,7 +121,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_queries">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$queries</td>
                 <td class="last"></td>
@@ -129,7 +129,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_hierarchy">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$hierarchy</td>
                 <td class="last"></td>
@@ -137,7 +137,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_depth">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$depth</td>
                 <td class="last"></td>
@@ -145,7 +145,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_menu">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$menu</td>
                 <td class="last"></td>
@@ -328,7 +328,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getModules">
-        <div class="location">at         line 26</div>
+        <div class="location">at         line 34</div>
         <code>        static            array
     <strong>getModules</strong>()
         </code>
@@ -358,7 +358,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getModule">
-        <div class="location">at         line 81</div>
+        <div class="location">at         line 89</div>
         <code>        static            array
     <strong>getModule</strong>(string|int $module)
         </code>
@@ -398,7 +398,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPermission">
-        <div class="location">at         line 97</div>
+        <div class="location">at         line 105</div>
         <code>        static            string
     <strong>getPermission</strong>(string|int $module)
         </code>
@@ -438,7 +438,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAdditionals">
-        <div class="location">at         line 109</div>
+        <div class="location">at         line 117</div>
         <code>        static            string
     <strong>getAdditionals</strong>($module)
         </code>
@@ -478,7 +478,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAdditionalsQuery">
-        <div class="location">at         line 121</div>
+        <div class="location">at         line 129</div>
         <code>        static            array
     <strong>getAdditionalsQuery</strong>($module, $type = null)
         </code>
@@ -523,7 +523,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceAdditionals">
-        <div class="location">at         line 137</div>
+        <div class="location">at         line 145</div>
         <code>        static            
     <strong>replaceAdditionals</strong>($id_module, $query)
         </code>
@@ -557,7 +557,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCurrentModule">
-        <div class="location">at         line 155</div>
+        <div class="location">at         line 163</div>
         <code>        static            int
     <strong>getCurrentModule</strong>()
         </code>
@@ -587,7 +587,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCurrentElement">
-        <div class="location">at         line 169</div>
+        <div class="location">at         line 177</div>
         <code>        static            int
     <strong>getCurrentElement</strong>()
         </code>
@@ -617,7 +617,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getQuery">
-        <div class="location">at         line 185</div>
+        <div class="location">at         line 193</div>
         <code>        static            array
     <strong>getQuery</strong>(int $id)
         </code>
@@ -657,7 +657,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_readOldQuery">
-        <div class="location">at         line 263</div>
+        <div class="location">at         line 271</div>
         <code>        static            
     <strong>readOldQuery</strong>($options)
         </code>
@@ -686,7 +686,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replacePlaceholder">
-        <div class="location">at         line 271</div>
+        <div class="location">at         line 279</div>
         <code>        static            
     <strong>replacePlaceholder</strong>($query, $custom = null)
         </code>
@@ -720,7 +720,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHierarchy">
-        <div class="location">at         line 289</div>
+        <div class="location">at         line 297</div>
         <code>        static            array
     <strong>getHierarchy</strong>(int $depth = 3)
         </code>
@@ -760,7 +760,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_buildArray">
-        <div class="location">at         line 332</div>
+        <div class="location">at         line 340</div>
         <code>        static    protected        array
     <strong>buildArray</strong>($module, $data = [], $actual)
         </code>
@@ -810,7 +810,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMainMenu">
-        <div class="location">at         line 359</div>
+        <div class="location">at         line 367</div>
         <code>        static            string
     <strong>getMainMenu</strong>(int $depth = 3)
         </code>
@@ -850,7 +850,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sidebarMenu">
-        <div class="location">at         line 385</div>
+        <div class="location">at         line 393</div>
         <code>        static    protected        string
     <strong>sidebarMenu</strong>(array $element, int $actual = null)
         </code>
@@ -895,7 +895,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_link">
-        <div class="location">at         line 451</div>
+        <div class="location">at         line 459</div>
         <code>        static            string
     <strong>link</strong>($modulo, $id_record, $testo = null, $alternativo = true, $extra = null, $blank = true)
         </code>

@@ -89,7 +89,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_instance">
-                    static                    protected                                        <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
+                    static                    protected                                        <abbr title="Util\Util\Singleton">Singleton</abbr>
                 </td>
                 <td>$instance</td>
                 <td class="last"></td>
@@ -97,7 +97,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_resources">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$resources</td>
                 <td class="last"></td>
@@ -105,7 +105,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_status">
-                    static                    protected                                        
+                    static                    protected                                        array
                 </td>
                 <td>$status</td>
                 <td class="last"></td>
@@ -122,7 +122,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>($token)
+                    <a href="#method___construct">__construct</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -145,8 +145,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___clone">__clone</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -156,107 +155,127 @@
                 <div class="col-md-8 type">
                     <a href="#method___wakeup">__wakeup</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_retrieve">retrieve</a>($resource)
+                    <a href="#method_retrieve">retrieve</a>(array $request)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Gestisce le richieste di informazioni riguardanti gli elementi esistenti.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_create">create</a>($resource)
+                    <a href="#method_create">create</a>(array $request)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Gestisce le richieste di creazione nuovi elementi.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_update">update</a>($resource)
+                    <a href="#method_update">update</a>(array $request)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Gestisce le richieste di aggiornamento di elementi esistenti.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_delete">delete</a>($resource)
+                    <a href="#method_delete">delete</a>(array $request)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Gestisce le richieste di eliminazione di elementi esistenti.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fileRequest">fileRequest</a>($resource, $kind)
+                    <a href="#method_fileRequest">fileRequest</a>($request, $kind)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Gestisce le richieste in modo generalizzato, con il relativo richiamo ai file specifici responsabili dell'operazione.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_error">error</a>($error)
+                    <a href="#method_error">error</a>(string|int $error)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Genera i contenuti di risposta nel caso si verifichi un errore.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getResources">getResources</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce l'elenco delle risorse disponibili per l'API, suddivise per categoria.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_response">response</a>($array)
+                    <a href="#method_response">response</a>(array $array)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Formatta i contentuti della risposta secondo il formato JSON.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getStatus">getStatus</a>()
+        
+                                            <p>Restituisce l'elenco degli stati dell'API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isAPIRequest">isAPIRequest</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se la richiesta effettuata è rivolta all'API.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRequest">getRequest</a>()
+        
+                                            <p>Restituisce i parametri specificati dalla richiesta.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCompatible">isCompatible</a>()
+        
+                                            <p>Controlla se il database è compatibile con l'API.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -267,9 +286,9 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 35</div>
+        <div class="location">at         line 44</div>
         <code>                    
-    <strong>__construct</strong>($token)
+    <strong>__construct</strong>()
         </code>
     </h3>
     <div class="details">
@@ -277,18 +296,17 @@
     
 
                 <div class="tags">
-                            <h4>Parameters</h4>
+            
+            
+                            <h4>Exceptions</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$token</td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
-            
-            
             
                     </div>
     </div>
@@ -296,7 +314,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInstance">
-        <div class="location">in <a href="Util/Singleton.html#method_getInstance"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 22</div>
+        <div class="location">in <a href="Util/Singleton.html#method_getInstance"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 27</div>
         <code>        static            <a href="Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
     <strong>getInstance</strong>()
         </code>
@@ -326,7 +344,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 33</div>
+        <div class="location">in <a href="Util/Singleton.html#method___clone"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 41</div>
         <code>                private    
     <strong>__clone</strong>()
         </code>
@@ -335,6 +353,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -345,7 +365,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 37</div>
+        <div class="location">in <a href="Util/Singleton.html#method___wakeup"><abbr title="Util\Singleton">Singleton</abbr></a> at         line 48</div>
         <code>                private    
     <strong>__wakeup</strong>()
         </code>
@@ -354,6 +374,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -364,27 +386,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_retrieve">
-        <div class="location">at         line 44</div>
-        <code>                    
-    <strong>retrieve</strong>($resource)
+        <div class="location">at         line 60</div>
+        <code>                    string
+    <strong>retrieve</strong>(array $request)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Gestisce le richieste di informazioni riguardanti gli elementi esistenti.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$resource</td>
+                <td>array</td>
+                <td>$request</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -393,27 +426,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_create">
-        <div class="location">at         line 132</div>
-        <code>                    
-    <strong>create</strong>($resource)
+        <div class="location">at         line 156</div>
+        <code>                    string
+    <strong>create</strong>(array $request)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Gestisce le richieste di creazione nuovi elementi.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$resource</td>
+                <td>array</td>
+                <td>$request</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -422,27 +466,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_update">
-        <div class="location">at         line 137</div>
-        <code>                    
-    <strong>update</strong>($resource)
+        <div class="location">at         line 168</div>
+        <code>                    string
+    <strong>update</strong>(array $request)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Gestisce le richieste di aggiornamento di elementi esistenti.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$resource</td>
+                <td>array</td>
+                <td>$request</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -451,27 +506,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         line 142</div>
-        <code>                    
-    <strong>delete</strong>($resource)
+        <div class="location">at         line 180</div>
+        <code>                    string
+    <strong>delete</strong>(array $request)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Gestisce le richieste di eliminazione di elementi esistenti.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
-                <td>$resource</td>
+                <td>array</td>
+                <td>$request</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -480,22 +546,24 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fileRequest">
-        <div class="location">at         line 147</div>
-        <code>            protected        
-    <strong>fileRequest</strong>($resource, $kind)
+        <div class="location">at         line 192</div>
+        <code>            protected        string
+    <strong>fileRequest</strong>($request, $kind)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Gestisce le richieste in modo generalizzato, con il relativo richiamo ai file specifici responsabili dell'operazione.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
-                <td>$resource</td>
+                <td>$request</td>
                 <td></td>
             </tr>
                     <tr>
@@ -506,6 +574,15 @@
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -514,27 +591,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_error">
-        <div class="location">at         line 163</div>
-        <code>        static            
-    <strong>error</strong>($error)
+        <div class="location">at         line 221</div>
+        <code>        static            string
+    <strong>error</strong>(string|int $error)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Genera i contenuti di risposta nel caso si verifichi un errore.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string|int</td>
                 <td>$error</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -543,8 +631,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getResources">
-        <div class="location">at         line 174</div>
-        <code>        static            
+        <div class="location">at         line 240</div>
+        <code>        static            array
     <strong>getResources</strong>()
         </code>
     </h3>
@@ -552,8 +640,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce l'elenco delle risorse disponibili per l'API, suddivise per categoria.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -562,27 +661,68 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_response">
-        <div class="location">at         line 209</div>
-        <code>        static            
-    <strong>response</strong>($array)
+        <div class="location">at         line 284</div>
+        <code>        static            string
+    <strong>response</strong>(array $array)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Formatta i contentuti della risposta secondo il formato JSON.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$array</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getStatus">
+        <div class="location">at         line 316</div>
+        <code>        static            array
+    <strong>getStatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restituisce l'elenco degli stati dell'API.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -591,8 +731,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAPIRequest">
-        <div class="location">at         line 224</div>
-        <code>        static            
+        <div class="location">at         line 326</div>
+        <code>        static            bool
     <strong>isAPIRequest</strong>()
         </code>
     </h3>
@@ -600,8 +740,70 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se la richiesta effettuata è rivolta all'API.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRequest">
+        <div class="location">at         line 334</div>
+        <code>        static            
+    <strong>getRequest</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restituisce i parametri specificati dalla richiesta.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCompatible">
+        <div class="location">at         line 344</div>
+        <code>        static            bool
+    <strong>isCompatible</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Controlla se il database è compatibile con l'API.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>

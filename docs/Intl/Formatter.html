@@ -86,7 +86,7 @@
     
 
             <div class="description">
-            <p>Classe per gestire le conversione di date e numeri tra diversi formati.</p>                                </div>
+            <p>Classe per gestire la formattazione di date e numeri in convenzioni differenti.</p>                                </div>
     
     
     
@@ -95,7 +95,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_numberSeparators">
-                                        protected                                        
+                                        protected                                        array
                 </td>
                 <td>$numberSeparators</td>
                 <td class="last"></td>
@@ -103,7 +103,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_datePattern">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$datePattern</td>
                 <td class="last"></td>
@@ -111,7 +111,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_timePattern">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$timePattern</td>
                 <td class="last"></td>
@@ -119,7 +119,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_timestampPattern">
-                                        protected                                        
+                                        protected                                        string
                 </td>
                 <td>$timestampPattern</td>
                 <td class="last"></td>
@@ -307,7 +307,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertNumberTo">convertNumberTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatNumberTo">formatNumberTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un numero da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -317,7 +317,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertTimestampTo">convertTimestampTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatTimestampTo">formatTimestampTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un timestamp da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -327,7 +327,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertDateTo">convertDateTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatDateTo">formatDateTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte una data da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -337,7 +337,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_convertTimeTo">convertTimeTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatTimeTo">formatTimeTo</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un orario da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -347,7 +347,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getNumberFrom">getNumberFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatNumberFrom">formatNumberFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un numero da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -357,7 +357,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getTimestampFrom">getTimestampFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatTimestampFrom">formatTimestampFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un timestamp da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -367,7 +367,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getDateFrom">getDateFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatDateFrom">formatDateFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte una data da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -377,7 +377,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getTimeFrom">getTimeFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+                    <a href="#method_formatTimeFrom">formatTimeFrom</a>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         
                                             <p>Converte un orario da una formattazione all'altra.</p>                </div>
                 <div class="col-md-2"></div>
@@ -390,7 +390,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 22</div>
+        <div class="location">at         line 26</div>
         <code>                    
     <strong>__construct</strong>($numberSeparators = [], $date = null, $time = null, $timestamp = null)
         </code>
@@ -434,7 +434,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setNumberSeparators">
-        <div class="location">at         line 38</div>
+        <div class="location">at         line 42</div>
         <code>            protected        
     <strong>setNumberSeparators</strong>(string $values)
         </code>
@@ -465,7 +465,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNumberSeparators">
-        <div class="location">at         line 58</div>
+        <div class="location">at         line 62</div>
         <code>                    array
     <strong>getNumberSeparators</strong>()
         </code>
@@ -495,7 +495,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setDatePattern">
-        <div class="location">at         line 68</div>
+        <div class="location">at         line 72</div>
         <code>            protected        
     <strong>setDatePattern</strong>(string $value)
         </code>
@@ -526,7 +526,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDatePattern">
-        <div class="location">at         line 87</div>
+        <div class="location">at         line 91</div>
         <code>                    string
     <strong>getDatePattern</strong>()
         </code>
@@ -556,7 +556,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTimePattern">
-        <div class="location">at         line 97</div>
+        <div class="location">at         line 101</div>
         <code>            protected        
     <strong>setTimePattern</strong>(string $value)
         </code>
@@ -587,7 +587,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTimePattern">
-        <div class="location">at         line 116</div>
+        <div class="location">at         line 120</div>
         <code>                    string
     <strong>getTimePattern</strong>()
         </code>
@@ -617,7 +617,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTimestampPattern">
-        <div class="location">at         line 126</div>
+        <div class="location">at         line 130</div>
         <code>            protected        
     <strong>setTimestampPattern</strong>(string $value)
         </code>
@@ -648,7 +648,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTimestampPattern">
-        <div class="location">at         line 148</div>
+        <div class="location">at         line 152</div>
         <code>                    string
     <strong>getTimestampPattern</strong>()
         </code>
@@ -678,7 +678,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isNumber">
-        <div class="location">at         line 160</div>
+        <div class="location">at         line 164</div>
         <code>                    bool
     <strong>isNumber</strong>(string $value)
         </code>
@@ -718,7 +718,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isTimestamp">
-        <div class="location">at         line 178</div>
+        <div class="location">at         line 182</div>
         <code>                    bool
     <strong>isTimestamp</strong>(string $value)
         </code>
@@ -758,7 +758,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isDate">
-        <div class="location">at         line 196</div>
+        <div class="location">at         line 200</div>
         <code>                    bool
     <strong>isDate</strong>(string $value)
         </code>
@@ -798,7 +798,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isTime">
-        <div class="location">at         line 214</div>
+        <div class="location">at         line 218</div>
         <code>                    bool
     <strong>isTime</strong>(string $value)
         </code>
@@ -838,7 +838,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toNumberObject">
-        <div class="location">at         line 232</div>
+        <div class="location">at         line 236</div>
         <code>                    array
     <strong>toNumberObject</strong>(string $value)
         </code>
@@ -878,7 +878,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toTimestampObject">
-        <div class="location">at         line 294</div>
+        <div class="location">at         line 298</div>
         <code>                    string
     <strong>toTimestampObject</strong>(string $value)
         </code>
@@ -918,7 +918,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toDateObject">
-        <div class="location">at         line 314</div>
+        <div class="location">at         line 318</div>
         <code>                    string
     <strong>toDateObject</strong>(string $value)
         </code>
@@ -958,7 +958,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toTimeObject">
-        <div class="location">at         line 336</div>
+        <div class="location">at         line 340</div>
         <code>                    string
     <strong>toTimeObject</strong>(string $value)
         </code>
@@ -997,10 +997,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertNumberTo">
-        <div class="location">at         line 359</div>
+                    <h3 id="method_formatNumberTo">
+        <div class="location">at         line 363</div>
         <code>                    string
-    <strong>convertNumberTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatNumberTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1042,10 +1042,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertTimestampTo">
-        <div class="location">at         line 382</div>
+                    <h3 id="method_formatTimestampTo">
+        <div class="location">at         line 386</div>
         <code>                    string
-    <strong>convertTimestampTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatTimestampTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1087,10 +1087,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertDateTo">
-        <div class="location">at         line 397</div>
+                    <h3 id="method_formatDateTo">
+        <div class="location">at         line 401</div>
         <code>                    string
-    <strong>convertDateTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatDateTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1132,10 +1132,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_convertTimeTo">
-        <div class="location">at         line 412</div>
+                    <h3 id="method_formatTimeTo">
+        <div class="location">at         line 416</div>
         <code>                    string
-    <strong>convertTimeTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatTimeTo</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1177,10 +1177,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getNumberFrom">
-        <div class="location">at         line 427</div>
+                    <h3 id="method_formatNumberFrom">
+        <div class="location">at         line 431</div>
         <code>                    string
-    <strong>getNumberFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatNumberFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1222,10 +1222,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getTimestampFrom">
-        <div class="location">at         line 440</div>
+                    <h3 id="method_formatTimestampFrom">
+        <div class="location">at         line 444</div>
         <code>                    string
-    <strong>getTimestampFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatTimestampFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1267,10 +1267,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDateFrom">
-        <div class="location">at         line 453</div>
+                    <h3 id="method_formatDateFrom">
+        <div class="location">at         line 457</div>
         <code>                    string
-    <strong>getDateFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatDateFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">
@@ -1312,10 +1312,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getTimeFrom">
-        <div class="location">at         line 466</div>
+                    <h3 id="method_formatTimeFrom">
+        <div class="location">at         line 470</div>
         <code>                    string
-    <strong>getTimeFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
+    <strong>formatTimeFrom</strong>(<a href="../Intl/Formatter.html"><abbr title="Intl\Formatter">Formatter</abbr></a> $formatter, string $value)
         </code>
     </h3>
     <div class="details">

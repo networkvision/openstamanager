@@ -85,6 +85,8 @@
         
     
 
+            <div class="description">
+            <p>Classe astratta per la generazione di oggetti istanziabili una singola volta.</p>                                </div>
     
     
     
@@ -93,7 +95,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_instance">
-                    static                    protected                                        <a href="../Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
+                    static                    protected                                        <abbr title="Util\Util\Singleton">Singleton</abbr>
                 </td>
                 <td>$instance</td>
                 <td class="last"></td>
@@ -112,8 +114,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Protected constructor to prevent creating a new instance of the <b>Singleton</b> via the <code>new</code> operator from outside of this class.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -133,8 +134,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___clone">__clone</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -144,8 +144,7 @@
                 <div class="col-md-8 type">
                     <a href="#method___wakeup">__wakeup</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -156,7 +155,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 13</div>
+        <div class="location">at         line 18</div>
         <code>            protected        
     <strong>__construct</strong>()
         </code>
@@ -165,6 +164,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Protected constructor to prevent creating a new instance of the <b>Singleton</b> via the <code>new</code> operator from outside of this class.</p>                                                </div>
                 <div class="tags">
             
             
@@ -175,7 +176,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getInstance">
-        <div class="location">at         line 22</div>
+        <div class="location">at         line 27</div>
         <code>        static            <a href="../Util/Singleton.html"><abbr title="Util\Singleton">Singleton</abbr></a>
     <strong>getInstance</strong>()
         </code>
@@ -205,7 +206,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location">at         line 33</div>
+        <div class="location">at         line 41</div>
         <code>                private    
     <strong>__clone</strong>()
         </code>
@@ -214,6 +215,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private clone method to prevent cloning of the instance of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             
@@ -224,7 +227,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___wakeup">
-        <div class="location">at         line 37</div>
+        <div class="location">at         line 48</div>
         <code>                private    
     <strong>__wakeup</strong>()
         </code>
@@ -233,6 +236,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Private unserialize method to prevent unserializing of the <b>Singleton</b> instance.</p>                                                </div>
                 <div class="tags">
             
             

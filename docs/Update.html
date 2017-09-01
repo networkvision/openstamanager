@@ -108,129 +108,127 @@
                 <div class="col-md-8 type">
                     <a href="#method_prepareToUpdate">prepareToUpdate</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla la presenza di aggiornamenti e prepara il database per la procedura.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTodos">getTodos</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce l'elenco degli aggiornamento incompleti o non ancora effettuati.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getUpdate">getUpdate</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce il primo aggiornamento che deve essere completato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isVersion">isVersion</a>($string)
+                    <a href="#method_isVersion">isVersion</a>(string $string)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla che la stringa inserita possieda una struttura corrispondente a quella di una versione.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isUpdateAvailable">isUpdateAvailable</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla ci sono aggiornamenti da fare per il database.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isUpdateCompleted">isUpdateCompleted</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se la procedura di aggiornamento è conclusa.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_isUpdateLocked">isUpdateLocked</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Controlla se l'aggiornamento è in esecuzione.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getDatabaseVersion">getDatabaseVersion</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce la versione corrente del software gestita dal database.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getVersion">getVersion</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce la versione corrente del software gestita dal file system (file VERSION nella root).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getRevision">getRevision</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Restituisce la revisione corrente del software gestita dal file system (file REVISION nella root).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getFile">getFile</a>($file)
+                    <a href="#method_getFile">getFile</a>(string $file)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Ottiene i contenuti di un file.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_updateCleanup">updateCleanup</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Effettua una pulizia del database a seguito del completamento dell'aggiornamento.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_doUpdate">doUpdate</a>(int $rate = 20)
+        
+                                            <p>Esegue una precisa sezione dell'aggiornamento fa fare, partendo dalle query e passando poi allo script relativo.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -238,10 +236,9 @@
                     static&nbsp;
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_doUpdate">doUpdate</a>($rate = 20)
+                    <a href="#method_normalizeDatabase">normalizeDatabase</a>([type] $database_name)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Normalizza l'infrastruttura del database indicato, generalizzando charset e collation all'interno del database e delle tabelle ed effettuando una conversione delle tabelle all'engine InnoDB.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -249,21 +246,9 @@
                     static&nbsp;
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_normalizeDatabase">normalizeDatabase</a>($database_name)
+                    <a href="#method_executeScript">executeScript</a>(string $script)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_executeScript">executeScript</a>($script)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
+                                            <p>Esegue uno script PHP in un'ambiente il più possibile protetto.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -274,7 +259,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_prepareToUpdate">
-        <div class="location">at         line 13</div>
+        <div class="location">at         line 16</div>
         <code>        static    protected        
     <strong>prepareToUpdate</strong>()
         </code>
@@ -283,6 +268,8 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla la presenza di aggiornamenti e prepara il database per la procedura.</p>                                                </div>
                 <div class="tags">
             
             
@@ -293,8 +280,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTodos">
-        <div class="location">at         line 88</div>
-        <code>        static            
+        <div class="location">at         line 97</div>
+        <code>        static            array
     <strong>getTodos</strong>()
         </code>
     </h3>
@@ -302,8 +289,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce l'elenco degli aggiornamento incompleti o non ancora effettuati.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -312,8 +310,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUpdate">
-        <div class="location">at         line 112</div>
-        <code>        static            
+        <div class="location">at         line 126</div>
+        <code>        static            array
     <strong>getUpdate</strong>()
         </code>
     </h3>
@@ -321,8 +319,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce il primo aggiornamento che deve essere completato.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -331,27 +340,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isVersion">
-        <div class="location">at         line 119</div>
-        <code>        static            
-    <strong>isVersion</strong>($string)
+        <div class="location">at         line 140</div>
+        <code>        static            bool
+    <strong>isVersion</strong>(string $string)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla che la stringa inserita possieda una struttura corrispondente a quella di una versione.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$string</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -360,8 +380,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isUpdateAvailable">
-        <div class="location">at         line 124</div>
-        <code>        static            
+        <div class="location">at         line 150</div>
+        <code>        static            bool
     <strong>isUpdateAvailable</strong>()
         </code>
     </h3>
@@ -369,8 +389,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla ci sono aggiornamenti da fare per il database.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -379,8 +410,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isUpdateCompleted">
-        <div class="location">at         line 129</div>
-        <code>        static            
+        <div class="location">at         line 160</div>
+        <code>        static            bool
     <strong>isUpdateCompleted</strong>()
         </code>
     </h3>
@@ -388,8 +419,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se la procedura di aggiornamento è conclusa.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -398,8 +440,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isUpdateLocked">
-        <div class="location">at         line 134</div>
-        <code>        static            
+        <div class="location">at         line 170</div>
+        <code>        static            bool
     <strong>isUpdateLocked</strong>()
         </code>
     </h3>
@@ -407,8 +449,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Controlla se l'aggiornamento è in esecuzione.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -417,8 +470,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDatabaseVersion">
-        <div class="location">at         line 146</div>
-        <code>        static            
+        <div class="location">at         line 187</div>
+        <code>        static            string
     <strong>getDatabaseVersion</strong>()
         </code>
     </h3>
@@ -426,8 +479,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce la versione corrente del software gestita dal database.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -436,8 +500,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">at         line 155</div>
-        <code>        static            
+        <div class="location">at         line 201</div>
+        <code>        static            string
     <strong>getVersion</strong>()
         </code>
     </h3>
@@ -445,8 +509,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce la versione corrente del software gestita dal file system (file VERSION nella root).</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -455,8 +530,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getRevision">
-        <div class="location">at         line 160</div>
-        <code>        static            
+        <div class="location">at         line 211</div>
+        <code>        static            string
     <strong>getRevision</strong>()
         </code>
     </h3>
@@ -464,8 +539,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Restituisce la revisione corrente del software gestita dal file system (file REVISION nella root).</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -474,27 +560,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFile">
-        <div class="location">at         line 165</div>
-        <code>        static    protected        
-    <strong>getFile</strong>($file)
+        <div class="location">at         line 223</div>
+        <code>        static    protected        string
+    <strong>getFile</strong>(string $file)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Ottiene i contenuti di un file.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$file</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -503,8 +600,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_updateCleanup">
-        <div class="location">at         line 180</div>
-        <code>        static            
+        <div class="location">at         line 243</div>
+        <code>        static            bool
     <strong>updateCleanup</strong>()
         </code>
     </h3>
@@ -512,8 +609,19 @@
             
     
 
+                    <div class="method-description">
+                                    <p>Effettua una pulizia del database a seguito del completamento dell'aggiornamento.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -522,27 +630,38 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_doUpdate">
-        <div class="location">at         line 197</div>
-        <code>        static            
-    <strong>doUpdate</strong>($rate = 20)
+        <div class="location">at         line 268</div>
+        <code>        static            array|bool
+    <strong>doUpdate</strong>(int $rate = 20)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Esegue una precisa sezione dell'aggiornamento fa fare, partendo dalle query e passando poi allo script relativo.</p>                    <p>Prima dell'esecuzione dello script viene inoltre eseguita un'operazione di normalizzazione dei campi delle tabelle del database finalizzata a generalizzare la gestione delle informazioni per l'API: vengono quindi aggiunti i campi <b>created_at</b> e, se permesso dalla versione di MySQL, <b>updated_at</b> ad ogni tabella registrata del software.</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$rate</td>
-                <td></td>
+                <td>Numero di singole query da eseguire dell'aggiornamento corrente</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -551,21 +670,23 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_normalizeDatabase">
-        <div class="location">at         line 256</div>
+        <div class="location">at         line 339</div>
         <code>        static    protected        
-    <strong>normalizeDatabase</strong>($database_name)
+    <strong>normalizeDatabase</strong>([type] $database_name)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Normalizza l'infrastruttura del database indicato, generalizzando charset e collation all'interno del database e delle tabelle ed effettuando una conversione delle tabelle all'engine InnoDB.</p>                    <p><b>Attenzione</b>: se l'engine InnoDB non è supportato, il server ignorerà la conversione dell'engine e le foreign key del gestionale non funzioneranno adeguatamente.</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>[type]</td>
                 <td>$database_name</td>
                 <td></td>
             </tr>
@@ -580,21 +701,23 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_executeScript">
-        <div class="location">at         line 295</div>
+        <div class="location">at         line 389</div>
         <code>        static    protected        
-    <strong>executeScript</strong>($script)
+    <strong>executeScript</strong>(string $script)
         </code>
     </h3>
     <div class="details">
             
     
 
+                    <div class="method-description">
+                                    <p>Esegue uno script PHP in un'ambiente il più possibile protetto.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$script</td>
                 <td></td>
             </tr>
