@@ -112,6 +112,22 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_brute">
+                    static                    protected                                        int
+                </td>
+                <td>$brute</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_is_brute">
+                    static                    protected                                        bool
+                </td>
+                <td>$is_brute</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_infos">
                                         protected                                        array
                 </td>
@@ -333,6 +349,26 @@
                                             <p>Restituisce il nome del primo modulo navigabile dall'utente autenticato.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isBrute">isBrute</a>()
+        
+                                            <p>Controlla se sono in corso molti tentativi di accesso (possibile brute-forcing in corso).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBruteTimeout">getBruteTimeout</a>()
+        
+                                            <p>Restituisce il tempo di attesa rimanente per lo sblocco automatico dellla protezione contro attacchi brute-force.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -341,7 +377,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         line 41</div>
+        <div class="location">at         line 49</div>
         <code>            protected        
     <strong>__construct</strong>()
         </code>
@@ -434,7 +470,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_attempt">
-        <div class="location">at         line 75</div>
+        <div class="location">at         line 80</div>
         <code>                    bool
     <strong>attempt</strong>(string $username, string $password)
         </code>
@@ -479,7 +515,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_password_check">
-        <div class="location">at         line 136</div>
+        <div class="location">at         line 145</div>
         <code>            protected        
     <strong>password_check</strong>(string $password, string $hash, int $user_id = null)
         </code>
@@ -520,7 +556,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_saveToSession">
-        <div class="location">at         line 166</div>
+        <div class="location">at         line 175</div>
         <code>            protected        
     <strong>saveToSession</strong>()
         </code>
@@ -541,7 +577,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_identifyUser">
-        <div class="location">at         line 184</div>
+        <div class="location">at         line 195</div>
         <code>            protected        
     <strong>identifyUser</strong>(int $user_id)
         </code>
@@ -572,7 +608,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAuthenticated">
-        <div class="location">at         line 206</div>
+        <div class="location">at         line 217</div>
         <code>                    bool
     <strong>isAuthenticated</strong>()
         </code>
@@ -602,7 +638,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isAdmin">
-        <div class="location">at         line 216</div>
+        <div class="location">at         line 227</div>
         <code>                    bool
     <strong>isAdmin</strong>()
         </code>
@@ -632,7 +668,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUser">
-        <div class="location">at         line 226</div>
+        <div class="location">at         line 237</div>
         <code>                    array
     <strong>getUser</strong>()
         </code>
@@ -662,7 +698,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destory">
-        <div class="location">at         line 234</div>
+        <div class="location">at         line 245</div>
         <code>                    
     <strong>destory</strong>()
         </code>
@@ -683,7 +719,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFirstModule">
-        <div class="location">at         line 256</div>
+        <div class="location">at         line 267</div>
         <code>                    string
     <strong>getFirstModule</strong>()
         </code>
@@ -713,7 +749,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_hashPassword">
-        <div class="location">at         line 291</div>
+        <div class="location">at         line 302</div>
         <code>        static            string
     <strong>hashPassword</strong>(string $password)
         </code>
@@ -753,7 +789,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getStatus">
-        <div class="location">at         line 301</div>
+        <div class="location">at         line 312</div>
         <code>        static            array
     <strong>getStatus</strong>()
         </code>
@@ -783,7 +819,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">at         line 311</div>
+        <div class="location">at         line 322</div>
         <code>        static            bool
     <strong>check</strong>()
         </code>
@@ -813,7 +849,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_admin">
-        <div class="location">at         line 321</div>
+        <div class="location">at         line 332</div>
         <code>        static            bool
     <strong>admin</strong>()
         </code>
@@ -843,7 +879,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_user">
-        <div class="location">at         line 331</div>
+        <div class="location">at         line 342</div>
         <code>        static            array
     <strong>user</strong>()
         </code>
@@ -873,7 +909,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_logout">
-        <div class="location">at         line 339</div>
+        <div class="location">at         line 350</div>
         <code>        static            
     <strong>logout</strong>()
         </code>
@@ -894,7 +930,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_firstModule">
-        <div class="location">at         line 349</div>
+        <div class="location">at         line 360</div>
         <code>        static            string
     <strong>firstModule</strong>()
         </code>
@@ -912,6 +948,66 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBrute">
+        <div class="location">at         line 370</div>
+        <code>        static            bool
+    <strong>isBrute</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Controlla se sono in corso molti tentativi di accesso (possibile brute-forcing in corso).</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBruteTimeout">
+        <div class="location">at         line 392</div>
+        <code>        static            int
+    <strong>getBruteTimeout</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Restituisce il tempo di attesa rimanente per lo sblocco automatico dellla protezione contro attacchi brute-force.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
             <td></td>
         </tr>
     </table>

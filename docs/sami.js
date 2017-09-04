@@ -63,6 +63,8 @@ window.projectVersion = 'master';
                     {"type": "Method", "fromName": "Auth", "fromLink": "Auth.html", "link": "Auth.html#method_user", "name": "Auth::user", "doc": "&quot;Restituisce le informazioni riguardanti l&#039;utente autenticato.&quot;"},
                     {"type": "Method", "fromName": "Auth", "fromLink": "Auth.html", "link": "Auth.html#method_logout", "name": "Auth::logout", "doc": "&quot;Distrugge le informazioni riguardanti l&#039;utente autenticato, forzando il logout.&quot;"},
                     {"type": "Method", "fromName": "Auth", "fromLink": "Auth.html", "link": "Auth.html#method_firstModule", "name": "Auth::firstModule", "doc": "&quot;Restituisce il nome del primo modulo navigabile dall&#039;utente autenticato.&quot;"},
+                    {"type": "Method", "fromName": "Auth", "fromLink": "Auth.html", "link": "Auth.html#method_isBrute", "name": "Auth::isBrute", "doc": "&quot;Controlla se sono in corso molti tentativi di accesso (possibile brute-forcing in corso).&quot;"},
+                    {"type": "Method", "fromName": "Auth", "fromLink": "Auth.html", "link": "Auth.html#method_getBruteTimeout", "name": "Auth::getBruteTimeout", "doc": "&quot;Restituisce il tempo di attesa rimanente per lo sblocco automatico dellla protezione contro attacchi brute-force.&quot;"},
             
             {"type": "Class",  "link": "CSRF.html", "name": "CSRF", "doc": "&quot;Sistema di protezione CSRF, basato sulla libreria Slim CSRF.&quot;"},
                                                         {"type": "Method", "fromName": "CSRF", "fromLink": "CSRF.html", "link": "CSRF.html#method___construct", "name": "CSRF::__construct", "doc": "&quot;Create new CSRF guard.&quot;"},

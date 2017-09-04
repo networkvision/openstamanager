@@ -103,13 +103,21 @@
 <p>Con application programming interface (in acronimo API, in italiano interfaccia di programmazione di un'applicazione), in informatica, si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma.</p>
 <p>-- <cite><a href="https://it.wikipedia.org/wiki/Application_programming_interface">Wikipedia</a></cite></p>
 </blockquote>
-<p>L'API del progetto è attualmente ancora in sviluppo, e pertanto le funzioni disponibili potrebbero essere piuttosto ridotte. Di seguito sono elencate le basi per connettersi al sistema e ottenere i dati a cui si è interessati.</p>
+<p>L'API del progetto è attualmente ancora in sviluppo, e pertanto le funzioni disponibili potrebbero essere piuttosto ridotte.
+Di seguito sono elencate le basi per connettersi al sistema e ottenere i dati a cui si è interessati.</p>
 <!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
 <ul>
-<li><a href="#accesso">Accesso</a></li>
-<li><a href="#output">Output</a></li>
-<li><a href="#messaggi">Messaggi</a></li>
+<li><a href="#standard-di-comunicazione">Standard di comunicazione</a>
+<ul>
+<li><a href="#ottenere-la-chiave">Ottenere la chiave</a></li>
 <li><a href="#formato-dei-componenti">Formato dei componenti</a></li>
+</ul></li>
+<li><a href="#output">Output</a>
+<ul>
+<li><a href="#stati">Stati</a></li>
+<li><a href="#lettura">Lettura</a></li>
+</ul></li>
+<li><a href="#personalizzazione">Personalizzazione</a></li>
 <li><a href="#richieste-di-lettura">Richieste di lettura</a>
 <ul>
 <li><a href="#interventi">Interventi</a></li>
@@ -122,20 +130,32 @@
 </ul></li>
 </ul>
 <!-- /TOC -->
-<h2 id="accesso">Accesso</h2>
-<p>L'accesso all'API viene effettuato concatenendo la chiave dell'utenza all'URL del sito su cui è ospitato il progetto.</p>
-<pre><code>http://&lt;url_osm&gt;/api/?token=&lt;token&gt;</code></pre>
-<p>La chiave di accesso è ottenibile eseguendo la seguente query all'interno del database del progetto:</p>
-<pre><code class="language-sql">SELECT `token` FROM `zz_tokens` WHERE `id_utente` = &lt;id_utente&gt;</code></pre>
-<h2 id="output">Output</h2>
-<p>L'API del progetto permette di ottenere le informazioni attraverso un array in formato JSON.
-Per poter interpretare correttamente i dati, si devono ignorare gli indici numerici di primo livello  (non rilevanti all'interno del formato) e sfruttare in particolare i seguenti campi generici:</p>
+<h2 id="standard-di-comunicazione">Standard di comunicazione</h2>
+<p>Il funzionamento dell'API si basa fondamentalmente sull'utilizzo di una chiave di accesso, ospitata all'interno della tabella <code>zz_tokens</code> del database del progetto, univoca per ogni istanza dell'utente.</p>
+<p>Ogni richiesta all'API deve contenere la chiave di accesso (campo <code>token</code>) e l'operazione richiesta (campo <code>resource</code>), inserendo questi elementi tra gli ulteriori contenuti che si intendono inviare.
+I contenuti della richiesta devono quindi essere convertiti in formato JSON ed inviati all'API secondo uno specifico schema:</p>
 <ul>
-<li><code>records</code>, rappresentante il numero totale dei record richiesti;</li>
-<li><code>pages</code>, indicante il numero totale della pagine disponibili.</li>
+<li><code>POST</code> - Richieste di creazione (<strong>Create</strong>).</li>
+<li><code>GET</code> - Richieste di informazioni (<strong>Retrieve</strong>).</li>
+<li><code>PUT</code> - Richieste di modifica (<strong>Update</strong>).</li>
+<li><code>DELETE</code> - Richieste di eliminazione (<strong>Delete</strong>).</li>
 </ul>
-<p>Si ricorda che l'API prevede la restituzione di un insieme di dati limitato rispetto alla richiesta effettuatua: per ottenere l'intero insieme di informazioni è necessario eseguire molteplici richieste consecutive basate sul campo <code>page</code>.</p>
-<h2 id="messaggi">Messaggi</h2>
+<h3 id="ottenere-la-chiave">Ottenere la chiave</h3>
+<p>La chiave di accesso può essere ottenuta sfruttando l'operazione di accesso nativa dell'API, che prevede l'invio di una richiesta <strong>POST</strong> corrispondente alla seguente struttura:</p>
+<ul>
+<li><code>resource</code> - login.</li>
+<li><code>username</code> - &lt;username dell'account&gt;.</li>
+<li><code>password</code> - &lt;password dell'account&gt;.</li>
+</ul>
+<h3 id="formato-dei-componenti">Formato dei componenti</h3>
+<p>I seguenti componenti delle richieste devono seguire una rigida struttura:</p>
+<ul>
+<li><code>page</code> - intero.</li>
+<li><code>upd</code> - yyyy-MM-dd hh:mm:ss.</li>
+</ul>
+<h2 id="output">Output</h2>
+<p>L'API del progetto permette di ottenere le informazioni attraverso un array in formato JSON.</p>
+<h3 id="stati">Stati</h3>
 <p>Ogni richiesta effettuata all'API viene accompagnata da un messaggio predefinito che permette di interpretare in modo più preciso la risposta.
 In particolare, sono presenti i seguenti <em>status</em>:</p>
 <ul>
@@ -144,12 +164,25 @@ In particolare, sono presenti i seguenti <em>status</em>:</p>
 <li><code>401: Non autorizzato</code> - Accesso non autorizzato.</li>
 <li><code>404: Non trovato</code> - La risorsa richiesta non risulta disponibile.</li>
 <li><code>500: Errore del server</code> - Il gestionale non è in grado di completare la richiesta.</li>
+<li><code>503: Servizio non disponibile</code> - L'API del gestionale non è abilitata.</li>
 </ul>
-<h2 id="formato-dei-componenti">Formato dei componenti</h2>
-<p>I seguenti componenti delle richieste devono seguire una rigida struttura:</p>
+<h3 id="lettura">Lettura</h3>
+<p>Le richieste di lettura sono solitamente completate con l'invio di un numero predefinito di informazioni.
+Per poter interpretare correttamente i dati, si devono ignorare gli indici numerici di primo livello (non rilevanti all'interno del formato) e sfruttare in particolare i seguenti campi generici:</p>
 <ul>
-<li><code>page</code> (intero).</li>
-<li><code>upd</code> (yyyy-MM-dd hh:mm:ss).</li>
+<li><code>records</code>, rappresentante il numero totale dei record richiesti;</li>
+<li><code>pages</code>, indicante il numero totale della pagine disponibili.</li>
+</ul>
+<p>Si ricorda che l'API prevede la restituzione di un insieme di dati limitato rispetto alla richiesta effettuatua: per ottenere l'intero insieme di informazioni è necessario eseguire molteplici richieste consecutive basate sul campo <code>page</code>.</p>
+<h2 id="personalizzazione">Personalizzazione</h2>
+<p>L'API sfrutta una struttura modulare per poter funzionare in modo completo e garantire al tempo stesso il possibile ampliamento delle sue funzioni.
+In particolare, ogni modulo può specificare una determinata serie di operazioni che lo riguardano e che possono essere richiamate in vari modi.</p>
+<p>Di seguito lo schema attraverso cui l'API individua la presenza delle possibili richieste supportate dai moduli (cartelle <strong>api/</strong> e <strong>custom/api/</strong>):</p>
+<ul>
+<li><code>POST</code> - File <code>create.php</code>.</li>
+<li><code>GET</code> - File <code>eetrieve.php</code>.</li>
+<li><code>PUT</code> - File <code>update.php</code>.</li>
+<li><code>DELETE</code> - File <code>delete.php</code>.</li>
 </ul>
 <h2 id="richieste-di-lettura">Richieste di lettura</h2>
 <h3 id="interventi">Interventi</h3>
