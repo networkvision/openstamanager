@@ -67,8 +67,8 @@
                                         </a>
                                     </li>
                                                                     <li class="">
-                                        <a href="./moduli.html">
-                                            Moduli
+                                        <a href="./api.html">
+                                            API
                                         </a>
                                     </li>
                                                             </ul>
@@ -78,8 +78,13 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                                                     <li class="">
-                                        <a href="./api.html">
-                                            API
+                                        <a href="./struttura.html">
+                                            Struttura
+                                        </a>
+                                    </li>
+                                                                    <li class="">
+                                        <a href="./moduli.html">
+                                            Moduli
                                         </a>
                                     </li>
                                                                     <li class="">
@@ -99,29 +104,28 @@
                 
                 <section class="col-sm-9 col-lg-10 content">
                     <h1 id="file">File</h1>
+<p>La cartella <code>files</code> viene utilizzata dal progetto per gestire in modo unificato contenuti di vario tipo per i moduli installati.
+In generale, questa cartella è dedicata alla memorizzazione dei file di cui viene fatto l'upload attraverso la funzione fornita in automatico dal getionale, ma sono presenti delle specifiche personalizzazioni necessarie per l'adeguato funzionamento di alcuni moduli.</p>
 <!-- TOC depthFrom:2 depthTo:6 orderedList:false updateOnSave:true withLinks:true -->
 <ul>
-<li><a href="#myimpianti">MyImpianti</a></li>
+<li><a href="#modulo-myimpianti">Modulo MyImpianti</a></li>
 </ul>
 <!-- /TOC -->
-<h2 id="myimpianti">MyImpianti</h2>
-<p>La cartella <em>files</em> contiene file di vari tipologie, raggruppati in base al modulo di cui fanno parte:</p>
-<ul>
-<li>Impostazione (<code>.ini</code>), utilizzate dai moduli abilitati in tal senso per ampliare l'offerta naturale degli stessi.</li>
-<li>File di cui viene effettuato l'upload all'interno dei vari moduli (riconosciuti dal gestionale tramite le funzioni interne al file <code>lib/modulebuilder.php</code>).</li>
-</ul>
-<p>I file *.ini devono seguire il seguente standard. {} = facoltativo</p>
-<pre><code class="language-ini">[Nome]
+<h2 id="modulo-myimpianti">Modulo MyImpianti</h2>
+<p>Il modulo <strong>MyImpianti</strong> sfrutta la propria cartella all'interno di <code>files</code> per gestire, oltre alle proprie immagini, le impostazioni (<code>.ini</code>) dei componenti disponibili.</p>
+<p>I file <code>*.ini</code> devono seguire il seguente standard. {} = facoltativo</p>
+<pre><code class="language-ini">[Nome del campo]
 tipo = tag_HTML
-valore ={ "Valore di default"}
+valore = {"Valore di default"}
 {opzioni = "Opzione 1", "Opzione 2", "Opzione 3"}
 
-[Nome]
+[Nome del campo]
 tipo = tag_HTML
-valore ={ "Valore di default"}
+valore = {"Valore di default"}
 {opzioni = "Opzione 1", "Opzione 2", "Opzione 3"}</code></pre>
-<p>Per tag_HTML si intendono tutti i tag HTML, con preferenza rivolata verso quelli di input (input, select, textarea, date, ...) sebbene il sistema accetti anche gli altri (span, p, ...).</p>
-<p>Attualmente questi file vengono utilizzati esclusivamente dal modulo <strong>MyImpianti</strong> per la gestione delle varie tipologie di <em>Componenti</em>. Il file <code>my_impianti/componente.ini</code> è un esempio di base di questa funzionalità, e un'ulteriore personalizzazione può essere trovata <a href="http://www.openstamanager.com/forum/viewtopic.php?f=5&amp;t=93">nel forum</a>.</p>
+<p>La dicitura &quot;tag_HTML&quot; indica la possibilità di inserire all'interno del campo il nome di un qualsiasi tag HTML per l'utilizzo durante la modifica.
+In particolare, il gestionale supporta la maggior parte dei campi HTML di input (input, select, textarea, date, ...); se necessario, è inoltre possibile  (span, p, ...).</p>
+<p>Il file <code>my_impianti/componente.ini</code> è un esempio di base di questa funzionalità, e un'ulteriore personalizzazione può essere trovata <a href="http://www.openstamanager.com/forum/viewtopic.php?f=5&amp;t=93">nel forum</a>.</p>
                 </section>
 
             </div>
@@ -169,6 +173,13 @@ valore ={ "Valore di default"}
                 });
             });
 
+                            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-42808312-1', 'auto');
+                ga('send', 'pageview');
             
         </script>
 
